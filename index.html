@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>玛奇朵指数 看板</title>
+<style>
+  :root{
+    --bg:#f6f7fb; --card:#ffffff; --ink:#1f2733; --sub:#6b7686;
+    --line:#e6e9f0; --green:#2e7d32; --amber:#f9a825; --orange:#ef6c00; --red:#c62828;
+    --blue:#2f6fed; --shadow:0 1px 3px rgba(20,30,60,.06),0 6px 20px rgba(20,30,60,.05);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+    line-height:1.5;padding:18px;}
+  .wrap{max-width:920px;margin:0 auto;}
+  header{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:6px;}
+  h1{font-size:22px;margin:0;letter-spacing:.5px;}
+  .sub{color:var(--sub);font-size:13px;margin:0 0 10px;}
+  .bar{display:flex;align-items:center;gap:10px;font-size:12px;color:var(--sub);margin-bottom:12px;flex-wrap:wrap;}
+  button{font:inherit;border:1px solid var(--line);background:#fff;color:var(--ink);
+    padding:6px 14px;border-radius:8px;cursor:pointer;transition:.15s;}
+  button:hover{border-color:var(--blue);color:var(--blue);}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;
+    box-shadow:var(--shadow);padding:18px;margin-bottom:14px;}
+  .gauge-row{display:flex;align-items:center;gap:22px;flex-wrap:wrap;}
+  .gauge-num{font-size:58px;font-weight:800;line-height:1;min-width:120px;text-align:center;}
+  .gauge-meta{flex:1;min-width:240px;}
+  .gauge-label{font-size:18px;font-weight:700;margin-bottom:8px;}
+  .gauge-desc{font-size:13px;color:var(--sub);margin-bottom:10px;}
+  .track{height:14px;border-radius:8px;background:linear-gradient(90deg,#2e7d32,#7cb342,#f9a825,#ef6c00,#c62828);position:relative;}
+  .track .mark{position:absolute;top:-5px;width:4px;height:24px;background:#1f2733;border-radius:2px;transform:translateX(-2px);}
+  .track-scale{display:flex;justify-content:space-between;font-size:11px;color:var(--sub);margin-top:4px;}
+  .comps{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;}
+  .comp{padding:12px 14px;border:1px solid var(--line);border-radius:10px;background:#fbfcfe;}
+  .comp .name{font-size:13px;color:var(--sub);}
+  .comp .val{font-size:22px;font-weight:700;margin:2px 0 6px;}
+  .comp .mini{height:6px;border-radius:4px;background:var(--line);overflow:hidden;}
+  .comp .mini>i{display:block;height:100%;border-radius:4px;}
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;}
+  .stat{padding:12px;border:1px solid var(--line);border-radius:10px;text-align:center;background:#fbfcfe;}
+  .stat .k{font-size:12px;color:var(--sub);}
+  .stat .v{font-size:19px;font-weight:700;margin-top:3px;}
+  .chart-title{font-size:14px;font-weight:700;margin:0 0 8px;}
+  .chart-note{font-size:12px;color:var(--sub);margin:-4px 0 8px;}
+  .range-box{margin:2px 0 10px;}
+  .range-row{display:flex;align-items:center;gap:10px;}
+  .range-label{font-size:13px;color:var(--sub);white-space:nowrap;}
+  .range-val{font-size:13px;color:var(--accent,#2f6fed);font-weight:600;white-space:nowrap;min-width:58px;text-align:right;}
+  input[type=range]{flex:1;accent-color:#2f6fed;height:4px;cursor:pointer;}
+  .range-presets{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap;}
+  .range-presets button{font:inherit;font-size:12px;padding:3px 12px;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--sub);cursor:pointer;}
+  .range-presets button:hover{border-color:#2f6fed;color:#2f6fed;}
+  .range-presets button.active{background:#2f6fed;border-color:#2f6fed;color:#fff;}
+  svg{width:100%;height:auto;display:block;}
+  .log-form{display:flex;gap:8px;flex-wrap:wrap;align-items:end;margin-top:12px;}
+  .log-form label{font-size:12px;color:var(--sub);display:flex;flex-direction:column;gap:3px;}
+  .log-form input{font:inherit;padding:6px 8px;border:1px solid var(--line);border-radius:8px;width:120px;}
+  .log-list{margin-top:10px;font-size:12px;color:var(--sub);max-height:120px;overflow:auto;}
+  .log-list div{border-bottom:1px dashed var(--line);padding:4px 0;display:flex;justify-content:space-between;}
+  .note{font-size:12.5px;color:var(--sub);line-height:1.7;}
+  .note b{color:var(--ink);}
+  .banner{font-size:12.5px;padding:8px 12px;border-radius:8px;margin-bottom:12px;}
+  .banner.ok{background:#eaf6ec;color:#2e7d32;}
+  .banner.warn{background:#fff4e5;color:#b26a00;}
+  .banner.err{background:#fdecea;color:#c62828;}
+  .sector-row{display:flex;align-items:center;gap:10px;padding:7px 0;border-bottom:1px solid var(--line);font-size:13px;}
+  .sector-rank{width:20px;color:var(--sub);font-weight:700;text-align:center;flex:none;}
+  .sector-name{width:96px;flex:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .sector-bar{flex:1;height:8px;background:var(--line);border-radius:4px;overflow:hidden;min-width:40px;}
+  .sector-bar>i{display:block;height:100%;border-radius:4px;}
+  .sector-chg{width:62px;text-align:right;font-weight:700;flex:none;}
+  .sector-amt{width:62px;text-align:right;color:var(--sub);flex:none;}
+  .sector-foot{margin-top:8px;font-size:12px;color:var(--sub);}
+  .sector-note{font-size:13px;color:var(--sub);}
+  @media(max-width:620px){.comps,.stats{grid-template-columns:repeat(2,1fr);}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>玛奇朵指数 看板</h1>
+    <div class="bar"><span id="status">初始化…</span><button id="refresh">刷新实时</button></div>
+  </header>
+  <p class="sub">基于玛奇朵指数逆向情绪逻辑 · 指数越高 = 散户越狂热、市场越过热、越该谨慎 · 数据源：腾讯财经行情</p>
+
+  <div id="banner" class="banner warn">正在获取实时行情…</div>
+
+  <div class="card">
+    <div class="gauge-row">
+      <div class="gauge-num" id="idxNum">--</div>
+      <div class="gauge-meta">
+        <div class="gauge-label" id="idxLabel">读取中…</div>
+        <div class="gauge-desc" id="idxDesc"></div>
+        <div class="track"><div class="mark" id="idxMark" style="left:0%"></div></div>
+        <div class="track-scale"><span>0 冰点</span><span>50 温和</span><span>100 狂热</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card"><div class="comps" id="comps"></div></div>
+
+  <div class="card">
+    <div class="chart-title">今日市场实况（散户情绪快照）</div>
+    <div class="stats" id="stats"></div>
+  </div>
+
+  <div class="card">
+    <div class="chart-title">当前最热门板块 <span style="font-weight:400;color:var(--sub);font-size:12px">（按涨跌幅排序 · 腾讯财经）</span></div>
+    <div class="chart-note">下列板块按今日涨跌幅从高到低排列，红涨绿跌；长条长度代表涨幅大小。看"钱往哪儿涌"比单看指数更直观，和玛奇朵指数互为印证。</div>
+    <div id="sectorList"><div class="sector-note">正在获取板块行情…</div></div>
+  </div>
+
+  <div class="card">
+    <div class="chart-title">玛奇朵指数 · 历史走势</div>
+    <div class="chart-note">数据由服务端每日收盘后自动更新（GitHub Actions 定时任务），任何设备打开都看到连续、完整的历史，无需本地累积。拖动滑块或点预设可只看最近一段。</div>
+    <div class="range-box">
+      <div class="range-row">
+        <span class="range-label">显示区间</span>
+        <input id="histRange" type="range" min="1" max="30" value="30">
+        <span id="histRangeVal" class="range-val">全部</span>
+      </div>
+      <div class="range-presets">
+        <button data-n="7">近7天</button>
+        <button data-n="15">近15天</button>
+        <button data-n="30">近30天</button>
+        <button data-n="all">全部</button>
+      </div>
+    </div>
+    <div id="idxChart"></div>
+  </div>
+
+  <div class="card">
+    <div class="chart-title">两市成交额 · 历史累积</div>
+    <div class="chart-note">数据为<b>交易所真实成交金额</b>（上证+深证成指），2026/1/5 起的 144 个回测交易日已固化，并随每日收盘自动追加。显示区间与上方「显示区间」滑块联动。</div>
+    <div id="amtNote" class="chart-note"></div>
+    <div id="amtChart"></div>
+  </div>
+
+  <div class="card">
+    <div class="chart-title">回测复盘（已固化，不依赖联网）<span style="font-weight:400;color:var(--sub);font-size:12px">· 同款四维度逻辑</span></div>
+    <div class="chart-note">回测口径：2026/1/5–8/7 共 <b>144 个交易日</b>，点位与涨跌幅取自历史日K线；<b>两市成交额为交易所真实成交金额</b>（上证综指 + 深证成指日K金额字段直接求和，非折算估算），已交叉核对同花顺口径（1/14 = 3.94 万亿）。四维度打分与实时用同一套公式。数据来自 data.json，由服务端每日更新，不依赖运行时联网也可看历史。</div>
+    <div style="margin:6px 0 2px"><label style="font-size:13px;color:var(--sub)">选择月份：</label>
+      <select id="btMonth" style="font:inherit;padding:5px 8px;border:1px solid var(--line);border-radius:8px;">
+        <option value="2026-08">2026年8月</option>
+        <option value="2026-07">2026年7月</option>
+        <option value="2026-06">2026年6月</option>
+        <option value="2026-05">2026年5月</option>
+        <option value="2026-04">2026年4月</option>
+        <option value="2026-03">2026年3月</option>
+        <option value="2026-02">2026年2月</option>
+        <option value="2026-01">2026年1月</option>
+      </select>
+    </div>
+    <div id="btChart"></div>
+    <div id="btLiveNote" class="chart-note" style="color:var(--sub);margin:4px 0 2px"></div>
+    <div style="overflow:auto"><table id="btTable" style="width:100%;border-collapse:collapse;font-size:12.5px;margin-top:6px"></table></div>
+    <div id="btReview" class="note" style="margin-top:10px"></div>
+  </div>
+
+  <div class="card note">
+    <p><b>这是什么？</b>「玛奇朵指数」是一个<strong>逆向情绪指标</strong>：用市场真实数据（成交额热度、沪深300动能、创业板情绪、小盘溢价）合成 0–100 的情绪分。当成交暴量、题材与小票被疯炒、创业板单日大涨时，往往代表散户情绪过热、市场接近阶段性顶部；所以<strong>指数越高反而越该警惕</strong>，越低越可能是机会。</p>
+    <p><b>普适规律：</b>① <b>极值最有用</b>——指数越高（亢奋区）越接近阶段性顶部、后续回落概率越大；越低（冰点区）越可能是恐慌性机会，逆向指标的价值集中在两端极值。② <b>量价背离是危险信号</b>——成交放巨量但指数滞涨，往往意味着分歧加大、动能衰竭，而非趋势延续。③ <b>小票与创业板是情绪放大器</b>——小盘溢价和创业板维度对散户情绪最敏感，亢奋末端常小票疯涨、恐慌末端常杀小票。④ <b>高波动本身即风险</b>——情绪剧烈摆动说明市场处于博弈市，追涨杀跌在情绪高波动期最易被双向打脸。⑤ <b>没有永久的狂热</b>——情绪指标不会长期停在极高位，亢奋脉冲后必然冷却，呈"脉冲—冷却"循环而非单边亢奋。⑥ <b>中位区信号模糊</b>——指数落在中间区间时既非极端恐惧也非极端贪婪，参考意义有限。</p>
+    <p><b>说明：</b>本看板用<strong>腾讯财经实时行情</strong>重建玛奇朵指数的同套逻辑（已实测稳定返回真实数据）。阈值写在文件顶部 JS 的 <code>TH</code> 里，可随意调整。本看板仅供学习研究，<b>不构成任何投资建议</b>。</p>
+  </div>
+</div>
+
+<script>
+/* ========== 可调参数（阈值，与 update.py 完全一致） ========== */
+const TH = {
+  turnover: [[6000,0],[10000,15],[15000,35],[20000,55],[25000,72],[30000,88],[36000,100]],
+  pct:      [[-1.5,0],[-0.75,20],[0,40],[0.75,60],[1.5,80],[2.5,100]],
+  smallPrem:[[-1.5,0],[-0.75,20],[0,40],[0.75,60],[1.5,80],[2.5,100]]
+};
+const COMP_META = [
+  {key:'turnover', name:'成交额热度', desc:'两市成交额越高，参与越疯狂'},
+  {key:'hs300',    name:'沪深300动能', desc:'大盘涨跌，普涨=情绪高'},
+  {key:'cyb',      name:'创业板情绪', desc:'高贝塔题材板块，散户最爱'},
+  {key:'smallPrem',name:'小盘溢价',   desc:'中证1000−沪深300，小票越疯越高'}
+];
+function piecewise(table,x){
+  if(x<=table[0][0]) return table[0][1];
+  const n=table.length;
+  if(x>=table[n-1][0]) return table[n-1][1];
+  for(let i=0;i<n-1;i++){ const [x0,y0]=table[i],[x1,y1]=table[i+1];
+    if(x>=x0&&x<=x1){const t=(x1>x0)?(x-x0)/(x1-x0):0; return y0+(y1-y0)*t;} }
+  return table[n-1][1];
+}
+function colorFor(v){ if(v<20)return'#2e7d32'; if(v<40)return'#7cb342'; if(v<60)return'#f9a825'; if(v<80)return'#ef6c00'; return'#c62828'; }
+function labelFor(v){
+  if(v<20) return ['冰点 · 无人问津','逆向信号：市场冷清，往往是布局机会区'];
+  if(v<40) return ['偏冷 · 情绪低迷','参与意愿弱，可观望等待'];
+  if(v<60) return ['温和 · 正常波动','情绪中性，按自己体系操作'];
+  if(v<80) return ['偏热 · 散户开始亢奋','小白入场增多，注意控制仓位'];
+  return ['狂热 · 危险','逆向信号：散户疯狂追涨，警惕见顶、考虑减仓'];
+}
+function todayStr(){ const d=new Date(); return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0'); }
+function fmt(n){ return Math.round(n).toLocaleString('zh-CN'); }
+function lsGet(k,d){ try{return JSON.parse(localStorage.getItem(k))??d;}catch(e){return d;} }
+function lsSet(k,v){ localStorage.setItem(k,JSON.stringify(v)); }
+
+/* 数据源：腾讯财经行情（浏览器端 JSONP，最稳） */
+const IDX=['sh000001','sz399001','sh000300','sz399006','sh000852'];
+const SECTOR_CODES = ["sz399986","sz399975","sz399967","sz399998","sz399997","sz399812","sz399393","sz399417","sz399976","sh000688","sz399808","sz399971","sz399994","sz399395","sz399394","sz399965","sz399973","sh000932","sh000933","sh000935","sh000928","sh000929","sh000930","sh000991","sh000941","sh000936","sz399813","sz399983","sz399989"];
+
+/* 全局状态：历史来自 data.json（服务端每日更新），STATE 为今日实时展示（内存，不持久化） */
+let HIST=[];          // data.json.index_history
+let TURNHIST=[];      // data.json.amount_history
+let STATE=null;        // 今日实时
+let DATA_UPDATED_AT='';
+
+function loadTencent(){
+  return new Promise((resolve,reject)=>{
+    const s=document.createElement('script');
+    const t=setTimeout(()=>{ try{s.remove();}catch(e){} reject(new Error('timeout')); },12000);
+    s.onload=()=>{ clearTimeout(t);
+      const d={}; for(const c of IDX.concat(SECTOR_CODES)){ const v=window['v_'+c]; if(v!==undefined) d[c]=v; }
+      resolve(d);
+    };
+    s.onerror=()=>{ clearTimeout(t); reject(new Error('neterr')); };
+    s.src='https://qt.gtimg.cn/q='+IDX.concat(SECTOR_CODES).join(',');
+    document.body.appendChild(s);
+  });
+}
+function parseIdx(raw){ const f=raw.split('~');
+  return { chg:parseFloat(f[32]), amt:parseFloat(f[35].split('/')[2]) }; }
+function computeIndex(comps){ const k=Object.keys(comps); return Math.round(k.reduce((s,x)=>s+comps[x],0)/k.length); }
+
+function setBanner(type,msg){ const b=document.getElementById('banner'); b.className='banner '+type; b.textContent=msg; }
+function setStatus(t){ document.getElementById('status').textContent=t; }
+
+function render(){
+  if(!STATE){ document.getElementById('idxNum').textContent='--';
+    document.getElementById('idxLabel').textContent='暂无数据'; return; }
+  const idx=STATE.index, comps=STATE.comps;
+  document.getElementById('idxNum').textContent=idx;
+  document.getElementById('idxNum').style.color=colorFor(idx);
+  const [lab,desc]=labelFor(idx);
+  document.getElementById('idxLabel').textContent=lab;
+  document.getElementById('idxLabel').style.color=colorFor(idx);
+  document.getElementById('idxDesc').textContent=desc;
+  document.getElementById('idxMark').style.left=Math.max(0,Math.min(100,idx))+'%';
+  const box=document.getElementById('comps'); box.innerHTML='';
+  for(const m of COMP_META){ const v=Math.round(comps[m.key]); const col=colorFor(v);
+    const el=document.createElement('div'); el.className='comp';
+    el.innerHTML='<div class="name">'+m.name+'</div><div class="val" style="color:'+col+'">'+v+
+      '</div><div class="mini"><i style="width:'+v+'%;background:'+col+'"></i></div>'+
+      '<div class="name" style="margin-top:6px">'+m.desc+'</div>'; box.appendChild(el); }
+  const s=STATE.stats;
+  if(s){
+    const items=[['两市成交额',s.turnover?fmt(s.turnover)+' 亿':'—'],
+      ['沪深300',(s.hs300>=0?'+':'')+s.hs300.toFixed(2)+'%'],
+      ['创业板指',(s.cyb>=0?'+':'')+s.cyb.toFixed(2)+'%'],
+      ['中证1000',(s.zz1000>=0?'+':'')+s.zz1000.toFixed(2)+'%'],
+      ['小盘溢价',(s.smallPrem>=0?'+':'')+s.smallPrem.toFixed(2)+'%'],
+      ['数据时间',s.time||'—']];
+    document.getElementById('stats').innerHTML=items.map(it=>'<div class="stat"><div class="k">'+it[0]+'</div><div class="v">'+it[1]+'</div></div>').join('');
+  }
+  drawHistCharts();
+}
+
+function lineChart(series,opts){
+  if(!series||series.length===0) return '<div class="err">暂无数据</div>';
+  const W=680,H=240,pl=44,pr=12,pt=14,pb=26,iw=W-pl-pr,ih=H-pt-pb;
+  const ys=series.map(d=>d.y),yMin=opts.yMin??Math.min(...ys),yMax=opts.yMax??Math.max(...ys);
+  const ylo=yMin,yhi=yMax===yMin?yMin+1:yMax, X=i=>pl+(series.length===1?iw/2:i/(series.length-1)*iw),
+        Y=v=>pt+ih-((v-ylo)/(yhi-ylo))*ih; let grid='',glab='';
+  for(let g=0;g<=4;g++){ const val=ylo+(yhi-ylo)*g/4,yy=Y(val);
+    grid+='<line x1="'+pl+'" y1="'+yy+'" x2="'+(W-pr)+'" y2="'+yy+'" stroke="#eef1f6"/>';
+    glab+='<text x="'+(pl-6)+'" y="'+(yy+4)+'" text-anchor="end" font-size="10" fill="#9aa4b2">'+(opts.fmtY?opts.fmtY(val):Math.round(val))+'</text>'; }
+  let line='',area=''; series.forEach((d,i)=>{ line+=(i?'L':'M')+X(i).toFixed(1)+' '+Y(d.y).toFixed(1);
+    area+=(i?'L':'M')+X(i).toFixed(1)+' '+Y(d.y).toFixed(1); });
+  area+=' L'+X(series.length-1).toFixed(1)+' '+(pt+ih)+' L'+X(0).toFixed(1)+' '+(pt+ih)+' Z';
+  const last=series[series.length-1],lx=X(series.length-1),ly=Y(last.y);
+  const xlab=[0,Math.floor((series.length-1)/2),series.length-1].map(i=>
+    '<text x="'+X(i).toFixed(1)+'" y="'+(H-8)+'" text-anchor="middle" font-size="10" fill="#9aa4b2">'+series[i].x.slice(5)+'</text>').join('');
+  const uid='g'+Math.random().toString(36).slice(2);
+  return '<svg viewBox="0 0 '+W+' '+H+'" preserveAspectRatio="xMidYMid meet"><defs><linearGradient id="'+uid+'" x1="0" y1="0" x2="0" y2="1">'+
+    '<stop offset="0" stop-color="'+opts.color+'" stop-opacity="0.20"/><stop offset="1" stop-color="'+opts.color+'" stop-opacity="0"/></linearGradient></defs>'+
+    grid+glab+'<path d="'+area+'" fill="url(#'+uid+')"/><path d="'+line+'" fill="none" stroke="'+opts.color+'" stroke-width="2"/>'+
+    '<circle cx="'+lx.toFixed(1)+'" cy="'+ly.toFixed(1)+'" r="3.5" fill="'+opts.color+'"/><text x="'+(lx-4)+'" y="'+(ly-8)+
+    '" text-anchor="end" font-size="11" font-weight="700" fill="'+opts.color+'">'+(opts.fmtY?opts.fmtY(last.y):Math.round(last.y))+'</text>'+xlab+'</svg>';
+}
+
+const HIST_RANGE_KEY='baoma_hist_range';
+function drawHistCharts(){
+  const all=HIST;
+  const allAmt=TURNHIST;
+  const total=all.length;
+  let n=Number(lsGet(HIST_RANGE_KEY,'all'));
+  if(!isFinite(n)||n>total) n=total;
+  const series   = n>=total ? all    : all.slice(-n);
+  const seriesAmt= n>=total ? allAmt : allAmt.slice(-n);
+  syncHistRange(total);
+  document.getElementById('idxChart').innerHTML = series.length
+    ? lineChart(series.map(d=>({x:d.date,y:d.value})),{yMin:0,yMax:100,color:'#2f6fed'})
+    : '<div class="err">暂无历史记录</div>';
+  document.getElementById('amtChart').innerHTML = seriesAmt.length
+    ? lineChart(seriesAmt.map(d=>({x:d.date,y:d.y})),{color:'#ef6c00',fmtY:v=>Math.round(v)})
+    : '<div class="err">成交额历史不足</div>';
+}
+function syncHistRange(total){
+  total = (total===undefined) ? HIST.length : total;
+  const range=document.getElementById('histRange');
+  const val=document.getElementById('histRangeVal');
+  if(!range||!val) return;
+  let n=Number(lsGet(HIST_RANGE_KEY,'all'));
+  if(!isFinite(n)||n>total) n=total;
+  range.max=Math.max(1,total);
+  range.value=n;
+  val.textContent = (total===0||n>=total) ? ('全部 ('+total+')') : ('近 '+n+' 天');
+  document.querySelectorAll('.range-presets button').forEach(b=>{
+    const bn=b.dataset.n==='all'?'all':Number(b.dataset.n);
+    b.classList.toggle('active', bn==='all' ? (n>=total||total===0) : (bn===n && n<total));
+  });
+}
+function initHistRange(){
+  const range=document.getElementById('histRange'); if(!range) return;
+  range.addEventListener('input',e=>{ lsSet(HIST_RANGE_KEY,Number(e.target.value)); drawHistCharts(); });
+  document.querySelectorAll('.range-presets button').forEach(b=>{
+    b.addEventListener('click',()=>{ lsSet(HIST_RANGE_KEY, b.dataset.n==='all'?'all':Number(b.dataset.n)); drawHistCharts(); });
+  });
+  syncHistRange();
+}
+
+/* ========== 回测复盘文字（用户撰写，保留） ========== */
+const REVIEW = {
+  // '2026-08': 复盘留到月底做（用户要求），到时分析后直接写回此处
+  '2026-07':
+    '<p><b>复盘：7 月是典型"过山车"情绪市，单月从冰点 16 飙到狂热 89。</b>全月 23 个交易日，玛奇朵指数<b>均值仅 44（中性偏冷）</b>，但振幅超 70 点，反复在 16↔89 之间横跳——上半月（7/1–7/17）震荡走低、7/17 落到 19；月内最低出现在 7/24（<b>16</b>）；下半月剧烈反弹，7/21 冲到 89、7/27 再上 81、7/31 收 80。</p>'+
+    '<p><b>关于"成交额热度"：</b>这一维落在 <b>52~100 分</b>（两市 1.93~3.66 万亿），月初最热、月末缩量：7/1 两市成交 <b>3.66 万亿</b> 打满 100 分，到 7/24 只剩 1.93 万亿（52 分），单月量能腰斩式回落。这是<b>"高热度开局 + 价格剧烈双向 + 逐步缩量"</b>的博弈市——追涨杀跌会被两边打脸。</p>'+
+    '<p><b>创业板单日 ±7% 多次出现</b>（7/17 −7.15%、7/21 +7.05%、7/28 −7.35%），是情绪市的典型特征。逆向指标在这个月非常"有用"：每次砸到 20 上下（7/13 为 21，7/17、7/30 为 19，7/24 最低 16）都是恐慌区、反而该看机会；每次冲到 80 以上（7/21、7/27、7/31）都是亢奋区、反而该控仓。</p>',
+  '2026-06':
+    '<p><b>复盘：6 月是八个月里情绪中枢最高的一个月，均值约 59（偏热）。</b>全月 21 个交易日，玛奇朵指数从 6/8 的冰点 <b>24</b> 拉到 6/15 的 <b>92</b>，月末 6/30 又收在 85；多空交锋明显，不是单边市。</p>'+
+    '<p><b>关键节点：</b>6/15 创业板单日 <b>+5.30%</b>、沪深300 +2.39%，指数冲到月内最高 92（偏热接近狂热）；随后 6/23（沪深300 −2.77%、创业板 −3.84%）砸到 39、6/26（沪深300 −3.03%）再落到 38，短线情绪波动极大。6/22 两市成交冲到 <b>3.74 万亿</b>（月内最高），"成交额热度"维度打满 100。</p>'+
+    '<p><b>关于"成交额热度"：</b>6 月落在 <b>74~100 分</b>（两市 2.55~3.74 万亿），<b>21 天里有 14 天破 3 万亿</b>，是全样本量能最稳定充沛的一个月；6/22、6/25 两天触顶 100，其余在 74~99 之间波动。整月钱多、波动大，逆向指标同样适用：砸到 24~39 的恐慌区（6/8、6/10、6/23、6/26）反而可看机会，冲到 85~92（6/15、6/30）则宜控仓。</p>',
+  '2026-05':
+    '<p><b>复盘：5 月整体偏热，均值约 57，月初最亢奋、月末回落。</b>全月 18 个交易日，玛奇朵指数从 5/6 的 <b>83</b>（月内最高，沪深300 +1.45%、创业板 +2.75%）一路震荡，月末 5/29 落到 <b>31</b>；中段 5/21 砸到全月冰点 <b>25</b>（沪深300 −1.39%、创业板 −2.35%、小盘溢价 −1.99%）——是当月唯一的"恐慌捡便宜"窗口。</p>'+
+    '<p><b>关键节点：</b>5/6 节后开门红冲到 83，5/22 再上 80、5/11 到 79，月初到中旬情绪持续偏热；5/21 出现普跌（沪深300 −1.39%、创业板 −2.35%）指数摔到 25，与 5/29（沪深300 −0.45%、创业板 −2.11%、小盘溢价 −2.20%，指数 31）形成月末双底。创业板单日振幅同样不小，典型的"热中带抖"。</p>'+
+    '<p><b>关于"成交额热度"：</b>5 月落在 <b>84~99 分</b>（两市 2.89~3.54 万亿），<b>量能最平稳的一个月</b>——18 天里 13 天破 3 万亿，但一天都没打满 100；5/11 两市成交 <b>3.54 万亿</b>（月内最高）也只有 99 分。参与资金极充沛，指数却没跟着顶格，说明价格维度仍把每天拉开档次：5/21（3.48 万亿）、5/29（3.32 万亿）虽是天量，却因价格大跌被压到 25~31。钱多不等于涨。</p>',
+  '2026-04':
+    '<p><b>复盘：4 月是全样本最"清淡"的一个月，均值约 52，但量能明显萎缩。</b>全月 21 个交易日，玛奇朵指数从 4/2 的冰点 <b>20</b> 拉到 4/8 的 <b>85</b>（月内最高），月末 4/30 收在 51；两市成交在 4/7 一度只有 <b>1.61 万亿</b>——这是 1–8 月 144 个交易日里的<b>最低量能</b>。</p>'+
+    '<p><b>关键节点：</b>4/8 出现单日暴拉——伦深300 <b>+3.49%</b>、创业板 <b>+5.91%</b>，指数冲到月内最高 85，是全月情绪顶点；4/2（沪深300 −1.04%、创业板 −2.31%）砸到全月冰点 <b>20</b>，是当月唯一的"恐慌捡便宜"窗口。月末量能回升，4/23 两市成交 2.80 万亿（月内最高），但指数只有 35——典型的"价跌量增"，分歧极大。</p>'+
+    '<p><b>关于"成交额热度"：</b>4 月落在 <b>40~82 分</b>（两市 1.61~2.80 万亿），<b>全月没有一天破 3 万亿</b>，是八个月里量能最弱的一档。月初（4/3、4/7）只有 1.6~1.7 万亿，"成交额热度"跌到 40~41 分；月末逐步修复到 75~82 分。逆向指标在这里同样成立：砸到 20 的 4/2 反而该看机会，冲到 85 的 4/8 反而该控仓。</p>',
+  '2026-03':
+    '<p><b>复盘：3 月整体偏冷，均值约 44（八个月里与 7 月并列最低），且量能全程衰减。</b>全月 22 个交易日，玛奇朵指数在 17~74 间来回：上有 3/10（74）、3/25（71）的反弹，下有 3/23（<b>17</b>，全样本最恐慌之一）、3/17 与 3/31（21）的冰点；两市成交从月初 3.13 万亿一路缩到月末 1.85~1.99 万亿。</p>'+
+    '<p><b>关键节点：</b>3/23 单日重挫——沪深300 <b>−3.26%</b>、创业板 <b>−3.49%</b>，指数砸到全月最低 <b>17</b>；3/3（沪深300 −1.54%、创业板 −2.57%）指数 23，同属恐慌区。3/10（沪深300 +1.28%、创业板 +3.04%）、3/25（沪深300 +1.40%、创业板 +2.01%）两度反弹到 71~74。3/23 虽指数仅 17，但两市成交仍有 2.43 万亿、"成交额热度" 70 分——典型"价崩量在"。</p>'+
+    '<p><b>关于"成交额热度"：</b>3 月落在 <b>49~91 分</b>（两市 1.85~3.13 万亿），仅 3/2、3/3 两天破 3 万亿，月末 3/27 缩到 <b>1.85 万亿</b>（49 分）。3/3 成交 3.13 万亿是月内天量，却因价格大跌被压到 23。整月"量在衰、价在跌"，指数中枢偏低。逆向指标格外有用：3/3、3/23 砸到 17~23 的恐慌区反而该看机会，3/10、3/25 冲到 71~74 则宜控仓。</p>',
+  '2026-02':
+    '<p><b>复盘：2 月受春节长假影响，全月只有 14 个交易日（节前 2/2–2/13、节后 2/24–2/27），均值约 48（中性）。</b>玛奇朵指数节前先砸后弹：2/2 沪深300 −2.13%、创业板 −2.46%，指数跌到全月最低 <b>20</b>；2/3 随即反弹（沪深300 +1.18%、创业板 +1.86%）冲到 <b>79</b>。节后（2/24 起）回到 46~67 区间温和震荡。</p>'+
+    '<p><b>关键节点：</b>2/2 节前最后一跌砸到 20（当月唯一跌破 25 的恐慌窗口）；2/3 报复性反弹到 79（偏热）、2/9 也到 76。2/25 节后复工两市成交 2.46 万亿、指数 67，显示资金温和回流；2/5（24）、2/13（25）则是节前缩量+回调的低点。</p>'+
+    '<p><b>关于"成交额热度"：</b>2 月落在 <b>54~75 分</b>（两市 1.98~2.58 万亿），<b>全月无一天破 3 万亿</b>——春节效应下量能明显收缩，2/11 与 2/13 只有 1.98 万亿。成交冷清但指数并不极端，说明价格维度仍主导每天差异。逆向指标适用：2/2 的 20 是当月"恐慌捡便宜"窗口，2/3、2/9 的 76~79 则是亢奋区。</p>',
+  '2026-01':
+    '<p><b>复盘：1 月是全样本"钱最热"的一个月，均值约 56（中性偏热）。</b>全月 20 个交易日，玛奇朵指数多在 45~80 间摆动：月初 1/5 就到 77、1/12 冲到月内最高 <b>84</b>；最低 1/13 的 33、1/20 的 34。整月没有跌破 30 的极端恐慌区，情绪整体积极。</p>'+
+    '<p><b>关键节点：</b>1/12 沪深300 +0.65%、创业板 +1.82%、两市成交 3.60 万亿，指数 84（偏热）；1/13 成交更高（3.65 万亿）但沪深300 −0.60%、创业板 −1.96% 回落，指数摔到 33——同样的天量、相反的结果。<b>1/14 两市成交达 3.94 万亿，是 1–8 月 144 个交易日中的最高量能</b>，"成交额热度"打满 100，但沪深300 −0.40%，指数只有 65。</p>'+
+    '<p><b>关于"成交额热度"：</b>1 月落在 <b>73~100 分</b>（两市 2.55~3.94 万亿），20 天里 8 天破 3 万亿、1/12–1/14 连续三天打满 100 分——是样本里参与度最高的一档。钱极充沛、指数却没天天顶格，说明价格维度（沪深300/创业板/小盘溢价）仍在把每天拉开档次：1/13（3.65 万亿）、1/26（3.25 万亿）虽是天量，却因价格回落被压到 33~39。钱多不等于涨——成交热、价格砸，往往是分歧最大的时候。</p>'
+};
+
+function renderBacktest(mk){
+  const B=HIST.filter(d=>d.date.startsWith(mk)).slice().sort((a,b)=>a.date<b.date?-1:1);
+  document.getElementById('btChart').innerHTML=lineChart(B.map(d=>({x:d.date,y:d.value})),{yMin:0,yMax:100,color:'#ef6c00'});
+  const liveNote=document.getElementById('btLiveNote');
+  if(liveNote) liveNote.textContent = B.length
+    ? ('数据来自 data.json，由服务端每日收盘后自动更新；当前月含当日实时补全行时会随刷新更新。')
+    : '';
+  const head='<tr style="text-align:right;color:var(--sub)"><th style="text-align:left">日期</th><th>玛奇朵指数</th><th>成交额(亿)</th><th>沪深300</th><th>创业板</th><th>小盘溢价</th><th>四维度分(额/300/创/小)</th></tr>';
+  const rows=B.map(d=>{
+    const ic=colorFor(d.value);
+    const pct=v=>(v>=0?'+':'')+v.toFixed(2)+'%';
+    const tag=(d.date>=DATA_LIVE_FROM)?' <span style="color:#2e7d32;font-size:11px">实</span>':'';
+    return '<tr style="text-align:right;border-top:1px solid var(--line)">'+
+      '<td style="text-align:left">'+d.date.slice(5)+tag+'</td>'+
+      '<td style="font-weight:700;color:'+ic+'">'+d.value+'</td>'+
+      '<td>'+fmt(d.turnover)+'</td>'+
+      '<td>'+(d.hs300>=0?'+':'')+d.hs300.toFixed(2)+'%</td>'+
+      '<td style="color:'+(d.cyb>=0?'#c62828':'#2e7d32')+'">'+pct(d.cyb)+'</td>'+
+      '<td>'+pct(d.smallPrem)+'</td>'+
+      '<td style="color:var(--sub)">'+Math.round(d.comps.turnover)+' / '+Math.round(d.comps.hs300)+' / '+Math.round(d.comps.cyb)+' / '+Math.round(d.comps.smallPrem)+'</td>'+
+    '</tr>';
+  }).join('');
+  document.getElementById('btTable').innerHTML='<tbody>'+head+rows+'</tbody>';
+  document.getElementById('btReview').innerHTML=REVIEW[mk]||'';
+}
+function refreshMonthLabel(){
+  const sel=document.getElementById('btMonth'); if(!sel) return;
+  const curYM=todayStr().slice(0,7);
+  let opt=[...sel.options].find(o=>o.value===curYM);
+  if(!opt){ opt=document.createElement('option'); opt.value=curYM; sel.insertBefore(opt, sel.firstChild); }
+  const list=HIST.filter(d=>d.date.startsWith(curYM));
+  const m=parseInt(curYM.slice(5),10);
+  opt.textContent=curYM.slice(0,4)+'年'+m+'月（本月，共 '+list.length+' 个交易日）';
+  sel.value=curYM;
+  renderBacktest(curYM);
+}
+
+const DATA_LIVE_FROM='2026-08-08';   // 回测固化区间最后一天之后，标记为「实」
+
+function renderSectors(list){
+  const box=document.getElementById('sectorList');
+  if(!list||!list.length){ box.innerHTML='<div class="sector-note">板块数据获取失败，可稍后点"刷新实时"重试。</div>'; return; }
+  list.sort((a,b)=>b.chg-a.chg);
+  const top=list.slice(0,10);
+  const maxAbs=Math.max(0.1,...list.map(x=>Math.abs(x.chg)));
+  let html='';
+  top.forEach((x,i)=>{
+    const col=x.chg>=0?'#c62828':'#2e7d32';
+    const w=(Math.abs(x.chg)/maxAbs*100).toFixed(1);
+    html+='<div class="sector-row"><span class="sector-rank">'+(i+1)+'</span>'+
+      '<span class="sector-name" title="'+x.name+'">'+x.name+'</span>'+
+      '<span class="sector-bar"><i style="width:'+w+'%;background:'+col+'"></i></span>'+
+      '<span class="sector-chg" style="color:'+col+'">'+(x.chg>=0?'+':'')+x.chg.toFixed(2)+'%</span>'+
+      '<span class="sector-amt">'+fmt(x.amt)+'亿</span></div>';
+  });
+  const up=list.filter(x=>x.chg>=0).length, down=list.length-up;
+  const loser=list.reduce((a,b)=>b.chg<a.chg?b:a);
+  const lcol=loser.chg>=0?'#c62828':'#2e7d32';
+  html+='<div class="sector-foot">领跌：<b style="color:'+lcol+'">'+loser.name+' '+(loser.chg>=0?'+':'')+loser.chg.toFixed(2)+'%</b>　·　'+list.length+' 个板块中 '+up+' 涨 '+down+' 跌</div>';
+  box.innerHTML=html;
+}
+
+function renderFromHistLatest(){
+  if(!HIST.length) return;
+  const last=HIST[HIST.length-1];
+  STATE={index:last.value, comps:last.comps, source:'hist',
+    stats:{turnover:last.turnover, hs300:last.hs300, cyb:last.cyb, smallPrem:last.smallPrem, time:last.date}};
+  render();
+}
+
+async function run(){
+  setStatus('正在获取实时行情…'); setBanner('warn','正在获取实时行情（腾讯财经）…');
+  try{
+    const d=await loadTencent();
+    const sh=parseIdx(d['sh000001']), sz=parseIdx(d['sz399001']),
+          hs=parseIdx(d['sh000300']), cyb=parseIdx(d['sz399006']), zz=parseIdx(d['sh000852']);
+    const turnover=(sh.amt+sz.amt)/1e8, smallPrem=zz.chg-hs.chg;
+    const rawComps={ turnover:piecewise(TH.turnover,turnover), hs300:piecewise(TH.pct,hs.chg),
+      cyb:piecewise(TH.pct,cyb.chg), smallPrem:piecewise(TH.smallPrem,smallPrem) };
+    const idx=computeIndex(rawComps);
+    const comps={}; for(const k in rawComps) comps[k]=Math.round(rawComps[k]);
+    STATE={index:idx,comps,source:'live',
+      stats:{turnover,hs300:hs.chg,cyb:cyb.chg,zz1000:zz.chg,smallPrem,time:new Date().toLocaleTimeString('zh-CN')}};
+    // 内存中更新「今天」展示记录（不持久化；权威历史在 data.json，由服务端每天更新）
+    const tdy=todayStr();
+    const rec={date:tdy,value:idx,turnover:Math.round(turnover),hs300:hs.chg,cyb:cyb.chg,smallPrem,comps};
+    const ex=HIST.find(x=>x.date===tdy); if(ex) Object.assign(ex,rec); else HIST.push(rec);
+    const exA=TURNHIST.find(x=>x.date===tdy); if(exA) exA.y=Math.round(turnover); else TURNHIST.push({date:tdy,y:Math.round(turnover)});
+    HIST.sort((a,b)=>a.date<b.date?-1:1); TURNHIST.sort((a,b)=>a.date<b.date?-1:1);
+    setBanner('ok','实时数据已更新（数据源：腾讯财经行情） '+new Date().toLocaleString('zh-CN'));
+    setStatus('实时更新：'+new Date().toLocaleString('zh-CN'));
+    const sec=[];
+    for(const c of SECTOR_CODES){ const v=d[c]; if(v!==undefined){ const f=v.split('~');
+      if(f.length>=40){ sec.push({code:c,name:f[1].trim(),chg:parseFloat(f[32]),amt:parseFloat(f[35].split('/')[2])/1e8}); } } }
+    renderSectors(sec);
+  }catch(e){
+    renderFromHistLatest();
+    setBanner('warn','实时获取失败（网络/拦截），已显示最近一次数据；点"刷新实时"可重试。');
+    setStatus('实时获取失败，显示历史最新');
+    renderSectors(null);
+  }
+  render();
+  renderBacktest(todayStr().slice(0,7));
+  refreshMonthLabel();
+}
+
+async function init(){
+  try{
+    const r=await fetch('./data.json',{cache:'no-store'});
+    const data=await r.json();
+    HIST=data.index_history||[]; TURNHIST=data.amount_history||[];
+    DATA_UPDATED_AT=data.updated_at||'';
+  }catch(e){ HIST=[]; TURNHIST=[]; }
+  const amtNote=document.getElementById('amtNote');
+  if(amtNote) amtNote.innerHTML='数据由服务端每日收盘后自动更新（已内置 2026/1/5 起历史）；最后更新：'+(DATA_UPDATED_AT||'—');
+  initHistRange();
+  refreshMonthLabel();
+  renderFromHistLatest();   // 先显示历史最新，无需等待实时
+  run();                    // 再尝试刷新实时补充今日
+}
+document.getElementById('refresh').addEventListener('click',run);
+const btMonthSel=document.getElementById('btMonth');
+btMonthSel.addEventListener('change',()=>{ renderBacktest(btMonthSel.value); });
+init();
+</script>
+</body>
+</html>

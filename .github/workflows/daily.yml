@@ -1,0 +1,27 @@
+name: 每日更新玛奇朵指数
+
+on:
+  schedule:
+    - cron: '30 7 * * 1-5'   # 北京时间 15:30（UTC+8 = 07:30 UTC），周一至周五交易日
+  workflow_dispatch:          # 允许在 Actions 页面手动点一下立即跑
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: 运行更新脚本
+        run: python update.py
+      - name: 提交 data.json
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data.json
+          git commit -m "auto: 更新指数 $(date +%F)" || echo "无变化，跳过"
+          git push

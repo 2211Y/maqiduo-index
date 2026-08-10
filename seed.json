@@ -1,0 +1,2598 @@
+{
+  "index_history": [
+    {
+      "date": "2026-01-05",
+      "value": 77,
+      "turnover": 25463,
+      "hs300": 1.9,
+      "cyb": 2.85,
+      "smallPrem": 0.19,
+      "comps": {
+        "turnover": 73,
+        "hs300": 88,
+        "cyb": 100,
+        "smallPrem": 45
+      }
+    },
+    {
+      "date": "2026-01-06",
+      "value": 65,
+      "turnover": 28065,
+      "hs300": 1.55,
+      "cyb": 0.75,
+      "smallPrem": -0.11,
+      "comps": {
+        "turnover": 82,
+        "hs300": 81,
+        "cyb": 60,
+        "smallPrem": 37
+      }
+    },
+    {
+      "date": "2026-01-07",
+      "value": 56,
+      "turnover": 28541,
+      "hs300": -0.29,
+      "cyb": 0.31,
+      "smallPrem": 0.82,
+      "comps": {
+        "turnover": 83,
+        "hs300": 32,
+        "cyb": 48,
+        "smallPrem": 62
+      }
+    },
+    {
+      "date": "2026-01-08",
+      "value": 50,
+      "turnover": 28003,
+      "hs300": -0.82,
+      "cyb": -0.82,
+      "smallPrem": 1.64,
+      "comps": {
+        "turnover": 82,
+        "hs300": 18,
+        "cyb": 18,
+        "smallPrem": 83
+      }
+    },
+    {
+      "date": "2026-01-09",
+      "value": 71,
+      "turnover": 31227,
+      "hs300": 0.45,
+      "cyb": 0.77,
+      "smallPrem": 1.53,
+      "comps": {
+        "turnover": 90,
+        "hs300": 52,
+        "cyb": 61,
+        "smallPrem": 81
+      }
+    },
+    {
+      "date": "2026-01-12",
+      "value": 84,
+      "turnover": 36014,
+      "hs300": 0.65,
+      "cyb": 1.82,
+      "smallPrem": 2.15,
+      "comps": {
+        "turnover": 100,
+        "hs300": 57,
+        "cyb": 86,
+        "smallPrem": 93
+      }
+    },
+    {
+      "date": "2026-01-13",
+      "value": 33,
+      "turnover": 36510,
+      "hs300": -0.6,
+      "cyb": -1.96,
+      "smallPrem": -1.24,
+      "comps": {
+        "turnover": 100,
+        "hs300": 24,
+        "cyb": 0,
+        "smallPrem": 7
+      }
+    },
+    {
+      "date": "2026-01-14",
+      "value": 65,
+      "turnover": 39414,
+      "hs300": -0.4,
+      "cyb": 0.82,
+      "smallPrem": 1.06,
+      "comps": {
+        "turnover": 100,
+        "hs300": 29,
+        "cyb": 62,
+        "smallPrem": 68
+      }
+    },
+    {
+      "date": "2026-01-15",
+      "value": 54,
+      "turnover": 29055,
+      "hs300": 0.2,
+      "cyb": 0.56,
+      "smallPrem": -0.4,
+      "comps": {
+        "turnover": 85,
+        "hs300": 45,
+        "cyb": 55,
+        "smallPrem": 29
+      }
+    },
+    {
+      "date": "2026-01-16",
+      "value": 50,
+      "turnover": 30262,
+      "hs300": -0.41,
+      "cyb": -0.2,
+      "smallPrem": 0.31,
+      "comps": {
+        "turnover": 89,
+        "hs300": 29,
+        "cyb": 35,
+        "smallPrem": 48
+      }
+    },
+    {
+      "date": "2026-01-19",
+      "value": 48,
+      "turnover": 27083,
+      "hs300": 0.05,
+      "cyb": -0.7,
+      "smallPrem": 0.35,
+      "comps": {
+        "turnover": 79,
+        "hs300": 41,
+        "cyb": 21,
+        "smallPrem": 49
+      }
+    },
+    {
+      "date": "2026-01-20",
+      "value": 34,
+      "turnover": 27777,
+      "hs300": -0.33,
+      "cyb": -1.79,
+      "smallPrem": -0.67,
+      "comps": {
+        "turnover": 81,
+        "hs300": 31,
+        "cyb": 0,
+        "smallPrem": 22
+      }
+    },
+    {
+      "date": "2026-01-21",
+      "value": 58,
+      "turnover": 26006,
+      "hs300": 0.09,
+      "cyb": 0.54,
+      "smallPrem": 0.7,
+      "comps": {
+        "turnover": 75,
+        "hs300": 42,
+        "cyb": 54,
+        "smallPrem": 59
+      }
+    },
+    {
+      "date": "2026-01-22",
+      "value": 61,
+      "turnover": 26917,
+      "hs300": 0.01,
+      "cyb": 1.01,
+      "smallPrem": 0.73,
+      "comps": {
+        "turnover": 78,
+        "hs300": 40,
+        "cyb": 67,
+        "smallPrem": 59
+      }
+    },
+    {
+      "date": "2026-01-23",
+      "value": 68,
+      "turnover": 30852,
+      "hs300": -0.45,
+      "cyb": 0.63,
+      "smallPrem": 2.39,
+      "comps": {
+        "turnover": 90,
+        "hs300": 28,
+        "cyb": 57,
+        "smallPrem": 98
+      }
+    },
+    {
+      "date": "2026-01-26",
+      "value": 39,
+      "turnover": 32482,
+      "hs300": 0.09,
+      "cyb": -0.91,
+      "smallPrem": -1.34,
+      "comps": {
+        "turnover": 93,
+        "hs300": 42,
+        "cyb": 16,
+        "smallPrem": 4
+      }
+    },
+    {
+      "date": "2026-01-27",
+      "value": 57,
+      "turnover": 28950,
+      "hs300": -0.03,
+      "cyb": 0.71,
+      "smallPrem": 0.23,
+      "comps": {
+        "turnover": 85,
+        "hs300": 39,
+        "cyb": 59,
+        "smallPrem": 46
+      }
+    },
+    {
+      "date": "2026-01-28",
+      "value": 49,
+      "turnover": 29654,
+      "hs300": 0.26,
+      "cyb": -0.57,
+      "smallPrem": -0.05,
+      "comps": {
+        "turnover": 87,
+        "hs300": 47,
+        "cyb": 25,
+        "smallPrem": 39
+      }
+    },
+    {
+      "date": "2026-01-29",
+      "value": 44,
+      "turnover": 32300,
+      "hs300": 0.76,
+      "cyb": -0.57,
+      "smallPrem": -1.57,
+      "comps": {
+        "turnover": 93,
+        "hs300": 60,
+        "cyb": 25,
+        "smallPrem": 0
+      }
+    },
+    {
+      "date": "2026-01-30",
+      "value": 53,
+      "turnover": 28355,
+      "hs300": -1,
+      "cyb": 1.27,
+      "smallPrem": 0.07,
+      "comps": {
+        "turnover": 83,
+        "hs300": 13,
+        "cyb": 74,
+        "smallPrem": 42
+      }
+    },
+    {
+      "date": "2026-02-02",
+      "value": 20,
+      "turnover": 25848,
+      "hs300": -2.13,
+      "cyb": -2.46,
+      "smallPrem": -1.25,
+      "comps": {
+        "turnover": 75,
+        "hs300": 0,
+        "cyb": 0,
+        "smallPrem": 7
+      }
+    },
+    {
+      "date": "2026-02-03",
+      "value": 79,
+      "turnover": 25442,
+      "hs300": 1.18,
+      "cyb": 1.86,
+      "smallPrem": 1.75,
+      "comps": {
+        "turnover": 73,
+        "hs300": 71,
+        "cyb": 87,
+        "smallPrem": 85
+      }
+    },
+    {
+      "date": "2026-02-04",
+      "value": 45,
+      "turnover": 24810,
+      "hs300": 0.83,
+      "cyb": -0.4,
+      "smallPrem": -0.85,
+      "comps": {
+        "turnover": 71,
+        "hs300": 62,
+        "cyb": 29,
+        "smallPrem": 17
+      }
+    },
+    {
+      "date": "2026-02-05",
+      "value": 24,
+      "turnover": 21762,
+      "hs300": -0.6,
+      "cyb": -1.55,
+      "smallPrem": -1.09,
+      "comps": {
+        "turnover": 61,
+        "hs300": 24,
+        "cyb": 0,
+        "smallPrem": 11
+      }
+    },
+    {
+      "date": "2026-02-06",
+      "value": 39,
+      "turnover": 21457,
+      "hs300": -0.57,
+      "cyb": -0.73,
+      "smallPrem": 0.37,
+      "comps": {
+        "turnover": 60,
+        "hs300": 25,
+        "cyb": 21,
+        "smallPrem": 50
+      }
+    },
+    {
+      "date": "2026-02-09",
+      "value": 76,
+      "turnover": 22495,
+      "hs300": 1.63,
+      "cyb": 2.98,
+      "smallPrem": 0.64,
+      "comps": {
+        "turnover": 63,
+        "hs300": 83,
+        "cyb": 100,
+        "smallPrem": 57
+      }
+    },
+    {
+      "date": "2026-02-10",
+      "value": 44,
+      "turnover": 21055,
+      "hs300": 0.11,
+      "cyb": -0.37,
+      "smallPrem": 0.09,
+      "comps": {
+        "turnover": 59,
+        "hs300": 43,
+        "cyb": 30,
+        "smallPrem": 42
+      }
+    },
+    {
+      "date": "2026-02-11",
+      "value": 36,
+      "turnover": 19843,
+      "hs300": -0.22,
+      "cyb": -1.08,
+      "smallPrem": 0.09,
+      "comps": {
+        "turnover": 54,
+        "hs300": 34,
+        "cyb": 11,
+        "smallPrem": 42
+      }
+    },
+    {
+      "date": "2026-02-12",
+      "value": 60,
+      "turnover": 21417,
+      "hs300": 0.12,
+      "cyb": 1.32,
+      "smallPrem": 0.79,
+      "comps": {
+        "turnover": 60,
+        "hs300": 43,
+        "cyb": 75,
+        "smallPrem": 61
+      }
+    },
+    {
+      "date": "2026-02-13",
+      "value": 25,
+      "turnover": 19827,
+      "hs300": -1.25,
+      "cyb": -1.57,
+      "smallPrem": -0.07,
+      "comps": {
+        "turnover": 54,
+        "hs300": 7,
+        "cyb": 0,
+        "smallPrem": 38
+      }
+    },
+    {
+      "date": "2026-02-24",
+      "value": 60,
+      "turnover": 22021,
+      "hs300": 1.01,
+      "cyb": 0.99,
+      "smallPrem": 0.15,
+      "comps": {
+        "turnover": 62,
+        "hs300": 67,
+        "cyb": 66,
+        "smallPrem": 44
+      }
+    },
+    {
+      "date": "2026-02-25",
+      "value": 67,
+      "turnover": 24625,
+      "hs300": 0.6,
+      "cyb": 1.41,
+      "smallPrem": 0.92,
+      "comps": {
+        "turnover": 71,
+        "hs300": 56,
+        "cyb": 78,
+        "smallPrem": 65
+      }
+    },
+    {
+      "date": "2026-02-26",
+      "value": 51,
+      "turnover": 25384,
+      "hs300": -0.19,
+      "cyb": -0.29,
+      "smallPrem": 0.95,
+      "comps": {
+        "turnover": 73,
+        "hs300": 35,
+        "cyb": 32,
+        "smallPrem": 65
+      }
+    },
+    {
+      "date": "2026-02-27",
+      "value": 46,
+      "turnover": 24880,
+      "hs300": -0.34,
+      "cyb": -1.04,
+      "smallPrem": 1.17,
+      "comps": {
+        "turnover": 72,
+        "hs300": 31,
+        "cyb": 12,
+        "smallPrem": 71
+      }
+    },
+    {
+      "date": "2026-03-02",
+      "value": 42,
+      "turnover": 30207,
+      "hs300": 0.38,
+      "cyb": -0.49,
+      "smallPrem": -1.36,
+      "comps": {
+        "turnover": 88,
+        "hs300": 50,
+        "cyb": 27,
+        "smallPrem": 4
+      }
+    },
+    {
+      "date": "2026-03-03",
+      "value": 23,
+      "turnover": 31295,
+      "hs300": -1.54,
+      "cyb": -2.57,
+      "smallPrem": -2.41,
+      "comps": {
+        "turnover": 91,
+        "hs300": 0,
+        "cyb": 0,
+        "smallPrem": 0
+      }
+    },
+    {
+      "date": "2026-03-04",
+      "value": 34,
+      "turnover": 23658,
+      "hs300": -1.14,
+      "cyb": -1.41,
+      "smallPrem": 0.56,
+      "comps": {
+        "turnover": 67,
+        "hs300": 10,
+        "cyb": 2,
+        "smallPrem": 55
+      }
+    },
+    {
+      "date": "2026-03-05",
+      "value": 64,
+      "turnover": 23900,
+      "hs300": 0.98,
+      "cyb": 1.66,
+      "smallPrem": -0.03,
+      "comps": {
+        "turnover": 68,
+        "hs300": 66,
+        "cyb": 83,
+        "smallPrem": 39
+      }
+    },
+    {
+      "date": "2026-03-06",
+      "value": 54,
+      "turnover": 22001,
+      "hs300": 0.27,
+      "cyb": 0.38,
+      "smallPrem": 0.68,
+      "comps": {
+        "turnover": 62,
+        "hs300": 47,
+        "cyb": 50,
+        "smallPrem": 58
+      }
+    },
+    {
+      "date": "2026-03-09",
+      "value": 41,
+      "turnover": 26475,
+      "hs300": -0.97,
+      "cyb": -0.64,
+      "smallPrem": 0.42,
+      "comps": {
+        "turnover": 77,
+        "hs300": 14,
+        "cyb": 23,
+        "smallPrem": 51
+      }
+    },
+    {
+      "date": "2026-03-10",
+      "value": 74,
+      "turnover": 23979,
+      "hs300": 1.28,
+      "cyb": 3.04,
+      "smallPrem": 0.5,
+      "comps": {
+        "turnover": 69,
+        "hs300": 74,
+        "cyb": 100,
+        "smallPrem": 53
+      }
+    },
+    {
+      "date": "2026-03-11",
+      "value": 58,
+      "turnover": 25084,
+      "hs300": 0.64,
+      "cyb": 1.31,
+      "smallPrem": -0.48,
+      "comps": {
+        "turnover": 72,
+        "hs300": 57,
+        "cyb": 75,
+        "smallPrem": 27
+      }
+    },
+    {
+      "date": "2026-03-12",
+      "value": 39,
+      "turnover": 24419,
+      "hs300": -0.36,
+      "cyb": -0.96,
+      "smallPrem": 0.03,
+      "comps": {
+        "turnover": 70,
+        "hs300": 30,
+        "cyb": 14,
+        "smallPrem": 41
+      }
+    },
+    {
+      "date": "2026-03-13",
+      "value": 36,
+      "turnover": 24003,
+      "hs300": -0.39,
+      "cyb": -0.22,
+      "smallPrem": -1.07,
+      "comps": {
+        "turnover": 69,
+        "hs300": 30,
+        "cyb": 34,
+        "smallPrem": 11
+      }
+    },
+    {
+      "date": "2026-03-16",
+      "value": 56,
+      "turnover": 23253,
+      "hs300": 0.05,
+      "cyb": 1.41,
+      "smallPrem": -0.09,
+      "comps": {
+        "turnover": 66,
+        "hs300": 41,
+        "cyb": 78,
+        "smallPrem": 38
+      }
+    },
+    {
+      "date": "2026-03-17",
+      "value": 21,
+      "turnover": 22079,
+      "hs300": -0.73,
+      "cyb": -2.29,
+      "smallPrem": -1.6,
+      "comps": {
+        "turnover": 62,
+        "hs300": 21,
+        "cyb": 0,
+        "smallPrem": 0
+      }
+    },
+    {
+      "date": "2026-03-18",
+      "value": 63,
+      "turnover": 20461,
+      "hs300": 0.45,
+      "cyb": 2.02,
+      "smallPrem": 0.51,
+      "comps": {
+        "turnover": 57,
+        "hs300": 52,
+        "cyb": 90,
+        "smallPrem": 54
+      }
+    },
+    {
+      "date": "2026-03-19",
+      "value": 23,
+      "turnover": 21110,
+      "hs300": -1.61,
+      "cyb": -1.11,
+      "smallPrem": -0.7,
+      "comps": {
+        "turnover": 59,
+        "hs300": 0,
+        "cyb": 10,
+        "smallPrem": 21
+      }
+    },
+    {
+      "date": "2026-03-20",
+      "value": 44,
+      "turnover": 22869,
+      "hs300": -0.35,
+      "cyb": 1.3,
+      "smallPrem": -1.24,
+      "comps": {
+        "turnover": 65,
+        "hs300": 31,
+        "cyb": 75,
+        "smallPrem": 7
+      }
+    },
+    {
+      "date": "2026-03-23",
+      "value": 17,
+      "turnover": 24315,
+      "hs300": -3.26,
+      "cyb": -3.49,
+      "smallPrem": -1.55,
+      "comps": {
+        "turnover": 70,
+        "hs300": 0,
+        "cyb": 0,
+        "smallPrem": 0
+      }
+    },
+    {
+      "date": "2026-03-24",
+      "value": 65,
+      "turnover": 20829,
+      "hs300": 1.28,
+      "cyb": 0.5,
+      "smallPrem": 1.3,
+      "comps": {
+        "turnover": 58,
+        "hs300": 74,
+        "cyb": 53,
+        "smallPrem": 75
+      }
+    },
+    {
+      "date": "2026-03-25",
+      "value": 71,
+      "turnover": 21798,
+      "hs300": 1.4,
+      "cyb": 2.01,
+      "smallPrem": 0.58,
+      "comps": {
+        "turnover": 61,
+        "hs300": 77,
+        "cyb": 90,
+        "smallPrem": 55
+      }
+    },
+    {
+      "date": "2026-03-26",
+      "value": 25,
+      "turnover": 19436,
+      "hs300": -1.32,
+      "cyb": -1.34,
+      "smallPrem": -0.12,
+      "comps": {
+        "turnover": 53,
+        "hs300": 5,
+        "cyb": 4,
+        "smallPrem": 37
+      }
+    },
+    {
+      "date": "2026-03-27",
+      "value": 56,
+      "turnover": 18533,
+      "hs300": 0.56,
+      "cyb": 0.71,
+      "smallPrem": 0.84,
+      "comps": {
+        "turnover": 49,
+        "hs300": 55,
+        "cyb": 59,
+        "smallPrem": 62
+      }
+    },
+    {
+      "date": "2026-03-30",
+      "value": 40,
+      "turnover": 19159,
+      "hs300": -0.24,
+      "cyb": -0.68,
+      "smallPrem": 0.51,
+      "comps": {
+        "turnover": 52,
+        "hs300": 34,
+        "cyb": 22,
+        "smallPrem": 54
+      }
+    },
+    {
+      "date": "2026-03-31",
+      "value": 21,
+      "turnover": 19927,
+      "hs300": -0.93,
+      "cyb": -2.7,
+      "smallPrem": -0.97,
+      "comps": {
+        "turnover": 55,
+        "hs300": 15,
+        "cyb": 0,
+        "smallPrem": 14
+      }
+    },
+    {
+      "date": "2026-04-01",
+      "value": 68,
+      "turnover": 20125,
+      "hs300": 1.71,
+      "cyb": 1.96,
+      "smallPrem": 0.19,
+      "comps": {
+        "turnover": 55,
+        "hs300": 84,
+        "cyb": 89,
+        "smallPrem": 45
+      }
+    },
+    {
+      "date": "2026-04-02",
+      "value": 20,
+      "turnover": 18430,
+      "hs300": -1.04,
+      "cyb": -2.31,
+      "smallPrem": -0.77,
+      "comps": {
+        "turnover": 49,
+        "hs300": 12,
+        "cyb": 0,
+        "smallPrem": 19
+      }
+    },
+    {
+      "date": "2026-04-03",
+      "value": 28,
+      "turnover": 16565,
+      "hs300": -0.85,
+      "cyb": -0.73,
+      "smallPrem": -0.29,
+      "comps": {
+        "turnover": 41,
+        "hs300": 17,
+        "cyb": 21,
+        "smallPrem": 32
+      }
+    },
+    {
+      "date": "2026-04-07",
+      "value": 48,
+      "turnover": 16144,
+      "hs300": 0,
+      "cyb": 0.36,
+      "smallPrem": 0.92,
+      "comps": {
+        "turnover": 40,
+        "hs300": 40,
+        "cyb": 50,
+        "smallPrem": 65
+      }
+    },
+    {
+      "date": "2026-04-08",
+      "value": 85,
+      "turnover": 24345,
+      "hs300": 3.49,
+      "cyb": 5.91,
+      "smallPrem": 1.11,
+      "comps": {
+        "turnover": 70,
+        "hs300": 100,
+        "cyb": 100,
+        "smallPrem": 70
+      }
+    },
+    {
+      "date": "2026-04-09",
+      "value": 37,
+      "turnover": 21341,
+      "hs300": -0.64,
+      "cyb": -0.73,
+      "smallPrem": 0.21,
+      "comps": {
+        "turnover": 60,
+        "hs300": 23,
+        "cyb": 21,
+        "smallPrem": 46
+      }
+    },
+    {
+      "date": "2026-04-10",
+      "value": 68,
+      "turnover": 23229,
+      "hs300": 1.54,
+      "cyb": 3.78,
+      "smallPrem": -0.57,
+      "comps": {
+        "turnover": 66,
+        "hs300": 81,
+        "cyb": 100,
+        "smallPrem": 25
+      }
+    },
+    {
+      "date": "2026-04-13",
+      "value": 53,
+      "turnover": 21504,
+      "hs300": 0.21,
+      "cyb": 0.8,
+      "smallPrem": 0.14,
+      "comps": {
+        "turnover": 60,
+        "hs300": 46,
+        "cyb": 61,
+        "smallPrem": 44
+      }
+    },
+    {
+      "date": "2026-04-14",
+      "value": 71,
+      "turnover": 23837,
+      "hs300": 1.19,
+      "cyb": 2.36,
+      "smallPrem": 0.3,
+      "comps": {
+        "turnover": 68,
+        "hs300": 72,
+        "cyb": 97,
+        "smallPrem": 48
+      }
+    },
+    {
+      "date": "2026-04-15",
+      "value": 36,
+      "turnover": 24152,
+      "hs300": -0.34,
+      "cyb": -1.22,
+      "smallPrem": -0.13,
+      "comps": {
+        "turnover": 69,
+        "hs300": 31,
+        "cyb": 7,
+        "smallPrem": 37
+      }
+    },
+    {
+      "date": "2026-04-16",
+      "value": 72,
+      "turnover": 23417,
+      "hs300": 1.1,
+      "cyb": 3.17,
+      "smallPrem": 0.47,
+      "comps": {
+        "turnover": 67,
+        "hs300": 69,
+        "cyb": 100,
+        "smallPrem": 53
+      }
+    },
+    {
+      "date": "2026-04-17",
+      "value": 63,
+      "turnover": 24256,
+      "hs300": -0.17,
+      "cyb": 1.43,
+      "smallPrem": 1.07,
+      "comps": {
+        "turnover": 69,
+        "hs300": 35,
+        "cyb": 78,
+        "smallPrem": 69
+      }
+    },
+    {
+      "date": "2026-04-20",
+      "value": 53,
+      "turnover": 25788,
+      "hs300": 0.61,
+      "cyb": -0.02,
+      "smallPrem": 0,
+      "comps": {
+        "turnover": 75,
+        "hs300": 56,
+        "cyb": 39,
+        "smallPrem": 40
+      }
+    },
+    {
+      "date": "2026-04-21",
+      "value": 49,
+      "turnover": 24085,
+      "hs300": 0.22,
+      "cyb": 0.31,
+      "smallPrem": -0.3,
+      "comps": {
+        "turnover": 69,
+        "hs300": 46,
+        "cyb": 48,
+        "smallPrem": 32
+      }
+    },
+    {
+      "date": "2026-04-22",
+      "value": 70,
+      "turnover": 25598,
+      "hs300": 0.66,
+      "cyb": 1.73,
+      "smallPrem": 0.89,
+      "comps": {
+        "turnover": 74,
+        "hs300": 58,
+        "cyb": 85,
+        "smallPrem": 64
+      }
+    },
+    {
+      "date": "2026-04-23",
+      "value": 35,
+      "turnover": 28045,
+      "hs300": -0.28,
+      "cyb": -0.87,
+      "smallPrem": -1.12,
+      "comps": {
+        "turnover": 82,
+        "hs300": 33,
+        "cyb": 17,
+        "smallPrem": 10
+      }
+    },
+    {
+      "date": "2026-04-24",
+      "value": 35,
+      "turnover": 26419,
+      "hs300": -0.35,
+      "cyb": -1.41,
+      "smallPrem": -0.35,
+      "comps": {
+        "turnover": 77,
+        "hs300": 31,
+        "cyb": 2,
+        "smallPrem": 31
+      }
+    },
+    {
+      "date": "2026-04-27",
+      "value": 48,
+      "turnover": 25895,
+      "hs300": 0.03,
+      "cyb": -0.52,
+      "smallPrem": 0.38,
+      "comps": {
+        "turnover": 75,
+        "hs300": 41,
+        "cyb": 26,
+        "smallPrem": 50
+      }
+    },
+    {
+      "date": "2026-04-28",
+      "value": 30,
+      "turnover": 25363,
+      "hs300": -0.27,
+      "cyb": -1.43,
+      "smallPrem": -1.08,
+      "comps": {
+        "turnover": 73,
+        "hs300": 33,
+        "cyb": 2,
+        "smallPrem": 11
+      }
+    },
+    {
+      "date": "2026-04-29",
+      "value": 73,
+      "turnover": 25901,
+      "hs300": 1.1,
+      "cyb": 2.51,
+      "smallPrem": 0.32,
+      "comps": {
+        "turnover": 75,
+        "hs300": 69,
+        "cyb": 100,
+        "smallPrem": 49
+      }
+    },
+    {
+      "date": "2026-04-30",
+      "value": 51,
+      "turnover": 27409,
+      "hs300": -0.06,
+      "cyb": -0.27,
+      "smallPrem": 0.53,
+      "comps": {
+        "turnover": 80,
+        "hs300": 38,
+        "cyb": 33,
+        "smallPrem": 54
+      }
+    },
+    {
+      "date": "2026-05-06",
+      "value": 83,
+      "turnover": 32268,
+      "hs300": 1.45,
+      "cyb": 2.75,
+      "smallPrem": 0.85,
+      "comps": {
+        "turnover": 93,
+        "hs300": 79,
+        "cyb": 100,
+        "smallPrem": 63
+      }
+    },
+    {
+      "date": "2026-05-07",
+      "value": 73,
+      "turnover": 31440,
+      "hs300": 0.48,
+      "cyb": 1.45,
+      "smallPrem": 1.15,
+      "comps": {
+        "turnover": 91,
+        "hs300": 53,
+        "cyb": 79,
+        "smallPrem": 71
+      }
+    },
+    {
+      "date": "2026-05-08",
+      "value": 48,
+      "turnover": 30485,
+      "hs300": -0.58,
+      "cyb": -0.96,
+      "smallPrem": 0.89,
+      "comps": {
+        "turnover": 89,
+        "hs300": 25,
+        "cyb": 14,
+        "smallPrem": 64
+      }
+    },
+    {
+      "date": "2026-05-11",
+      "value": 79,
+      "turnover": 35389,
+      "hs300": 1.64,
+      "cyb": 3.5,
+      "smallPrem": -0.2,
+      "comps": {
+        "turnover": 99,
+        "hs300": 83,
+        "cyb": 100,
+        "smallPrem": 35
+      }
+    },
+    {
+      "date": "2026-05-12",
+      "value": 51,
+      "turnover": 32427,
+      "hs300": -0.08,
+      "cyb": 0.15,
+      "smallPrem": -0.43,
+      "comps": {
+        "turnover": 93,
+        "hs300": 38,
+        "cyb": 44,
+        "smallPrem": 29
+      }
+    },
+    {
+      "date": "2026-05-13",
+      "value": 78,
+      "turnover": 32400,
+      "hs300": 1.02,
+      "cyb": 2.63,
+      "smallPrem": 0.5,
+      "comps": {
+        "turnover": 93,
+        "hs300": 67,
+        "cyb": 100,
+        "smallPrem": 53
+      }
+    },
+    {
+      "date": "2026-05-14",
+      "value": 32,
+      "turnover": 33623,
+      "hs300": -1.68,
+      "cyb": -2.16,
+      "smallPrem": -0.3,
+      "comps": {
+        "turnover": 95,
+        "hs300": 0,
+        "cyb": 0,
+        "smallPrem": 32
+      }
+    },
+    {
+      "date": "2026-05-15",
+      "value": 43,
+      "turnover": 33445,
+      "hs300": -1.12,
+      "cyb": -0.56,
+      "smallPrem": 0.03,
+      "comps": {
+        "turnover": 95,
+        "hs300": 10,
+        "cyb": 25,
+        "smallPrem": 41
+      }
+    },
+    {
+      "date": "2026-05-18",
+      "value": 52,
+      "turnover": 28940,
+      "hs300": -0.54,
+      "cyb": -0.36,
+      "smallPrem": 0.97,
+      "comps": {
+        "turnover": 85,
+        "hs300": 26,
+        "cyb": 30,
+        "smallPrem": 66
+      }
+    },
+    {
+      "date": "2026-05-19",
+      "value": 57,
+      "turnover": 28866,
+      "hs300": 0.4,
+      "cyb": -0.16,
+      "smallPrem": 0.61,
+      "comps": {
+        "turnover": 84,
+        "hs300": 51,
+        "cyb": 36,
+        "smallPrem": 56
+      }
+    },
+    {
+      "date": "2026-05-20",
+      "value": 54,
+      "turnover": 29537,
+      "hs300": -0.04,
+      "cyb": 0.34,
+      "smallPrem": 0.05,
+      "comps": {
+        "turnover": 87,
+        "hs300": 39,
+        "cyb": 49,
+        "smallPrem": 41
+      }
+    },
+    {
+      "date": "2026-05-21",
+      "value": 25,
+      "turnover": 34816,
+      "hs300": -1.39,
+      "cyb": -2.35,
+      "smallPrem": -1.99,
+      "comps": {
+        "turnover": 98,
+        "hs300": 3,
+        "cyb": 0,
+        "smallPrem": 0
+      }
+    },
+    {
+      "date": "2026-05-22",
+      "value": 80,
+      "turnover": 29033,
+      "hs300": 1.3,
+      "cyb": 2.84,
+      "smallPrem": 0.84,
+      "comps": {
+        "turnover": 85,
+        "hs300": 75,
+        "cyb": 100,
+        "smallPrem": 62
+      }
+    },
+    {
+      "date": "2026-05-25",
+      "value": 74,
+      "turnover": 32057,
+      "hs300": 1.58,
+      "cyb": 2.1,
+      "smallPrem": -0.35,
+      "comps": {
+        "turnover": 92,
+        "hs300": 82,
+        "cyb": 92,
+        "smallPrem": 31
+      }
+    },
+    {
+      "date": "2026-05-26",
+      "value": 50,
+      "turnover": 32437,
+      "hs300": 0.53,
+      "cyb": 0.54,
+      "smallPrem": -1.81,
+      "comps": {
+        "turnover": 93,
+        "hs300": 54,
+        "cyb": 54,
+        "smallPrem": 0
+      }
+    },
+    {
+      "date": "2026-05-27",
+      "value": 43,
+      "turnover": 32386,
+      "hs300": -0.8,
+      "cyb": 0.07,
+      "smallPrem": -0.82,
+      "comps": {
+        "turnover": 93,
+        "hs300": 19,
+        "cyb": 42,
+        "smallPrem": 18
+      }
+    },
+    {
+      "date": "2026-05-28",
+      "value": 71,
+      "turnover": 29682,
+      "hs300": 0.12,
+      "cyb": 1.96,
+      "smallPrem": 0.94,
+      "comps": {
+        "turnover": 87,
+        "hs300": 43,
+        "cyb": 89,
+        "smallPrem": 65
+      }
+    },
+    {
+      "date": "2026-05-29",
+      "value": 31,
+      "turnover": 33190,
+      "hs300": -0.45,
+      "cyb": -2.11,
+      "smallPrem": -2.2,
+      "comps": {
+        "turnover": 94,
+        "hs300": 28,
+        "cyb": 0,
+        "smallPrem": 0
+      }
+    },
+    {
+      "date": "2026-06-01",
+      "value": 36,
+      "turnover": 28775,
+      "hs300": -0.98,
+      "cyb": -2.15,
+      "smallPrem": 0.22,
+      "comps": {
+        "turnover": 84,
+        "hs300": 14,
+        "cyb": 0,
+        "smallPrem": 46
+      }
+    },
+    {
+      "date": "2026-06-02",
+      "value": 68,
+      "turnover": 27930,
+      "hs300": 1.45,
+      "cyb": 2.66,
+      "smallPrem": -0.98,
+      "comps": {
+        "turnover": 81,
+        "hs300": 79,
+        "cyb": 100,
+        "smallPrem": 14
+      }
+    },
+    {
+      "date": "2026-06-03",
+      "value": 67,
+      "turnover": 31303,
+      "hs300": 0.49,
+      "cyb": 1.65,
+      "smallPrem": 0.08,
+      "comps": {
+        "turnover": 91,
+        "hs300": 53,
+        "cyb": 83,
+        "smallPrem": 42
+      }
+    },
+    {
+      "date": "2026-06-04",
+      "value": 44,
+      "turnover": 27577,
+      "hs300": -0.69,
+      "cyb": -0.83,
+      "smallPrem": 0.54,
+      "comps": {
+        "turnover": 80,
+        "hs300": 22,
+        "cyb": 18,
+        "smallPrem": 54
+      }
+    },
+    {
+      "date": "2026-06-05",
+      "value": 38,
+      "turnover": 30692,
+      "hs300": -1.79,
+      "cyb": -3.2,
+      "smallPrem": 0.85,
+      "comps": {
+        "turnover": 89,
+        "hs300": 0,
+        "cyb": 0,
+        "smallPrem": 63
+      }
+    },
+    {
+      "date": "2026-06-08",
+      "value": 24,
+      "turnover": 27927,
+      "hs300": -2.14,
+      "cyb": -3.69,
+      "smallPrem": -0.97,
+      "comps": {
+        "turnover": 81,
+        "hs300": 0,
+        "cyb": 0,
+        "smallPrem": 14
+      }
+    },
+    {
+      "date": "2026-06-09",
+      "value": 83,
+      "turnover": 26403,
+      "hs300": 1.87,
+      "cyb": 3.93,
+      "smallPrem": 1.07,
+      "comps": {
+        "turnover": 76,
+        "hs300": 87,
+        "cyb": 100,
+        "smallPrem": 69
+      }
+    },
+    {
+      "date": "2026-06-10",
+      "value": 29,
+      "turnover": 26192,
+      "hs300": -1.11,
+      "cyb": -2.7,
+      "smallPrem": -0.33,
+      "comps": {
+        "turnover": 76,
+        "hs300": 10,
+        "cyb": 0,
+        "smallPrem": 31
+      }
+    },
+    {
+      "date": "2026-06-11",
+      "value": 38,
+      "turnover": 25520,
+      "hs300": -0.55,
+      "cyb": -1.13,
+      "smallPrem": 0.07,
+      "comps": {
+        "turnover": 74,
+        "hs300": 25,
+        "cyb": 10,
+        "smallPrem": 42
+      }
+    },
+    {
+      "date": "2026-06-12",
+      "value": 60,
+      "turnover": 32149,
+      "hs300": 1.16,
+      "cyb": 0.5,
+      "smallPrem": -0.63,
+      "comps": {
+        "turnover": 92,
+        "hs300": 71,
+        "cyb": 53,
+        "smallPrem": 23
+      }
+    },
+    {
+      "date": "2026-06-15",
+      "value": 92,
+      "turnover": 30312,
+      "hs300": 2.39,
+      "cyb": 5.3,
+      "smallPrem": 1.49,
+      "comps": {
+        "turnover": 89,
+        "hs300": 98,
+        "cyb": 100,
+        "smallPrem": 80
+      }
+    },
+    {
+      "date": "2026-06-16",
+      "value": 73,
+      "turnover": 30647,
+      "hs300": -0.15,
+      "cyb": 1.72,
+      "smallPrem": 1.62,
+      "comps": {
+        "turnover": 89,
+        "hs300": 36,
+        "cyb": 84,
+        "smallPrem": 82
+      }
+    },
+    {
+      "date": "2026-06-17",
+      "value": 67,
+      "turnover": 30918,
+      "hs300": 0.97,
+      "cyb": 1.56,
+      "smallPrem": -0.29,
+      "comps": {
+        "turnover": 90,
+        "hs300": 66,
+        "cyb": 81,
+        "smallPrem": 32
+      }
+    },
+    {
+      "date": "2026-06-18",
+      "value": 71,
+      "turnover": 33101,
+      "hs300": 0.21,
+      "cyb": 2.05,
+      "smallPrem": 0.56,
+      "comps": {
+        "turnover": 94,
+        "hs300": 46,
+        "cyb": 91,
+        "smallPrem": 55
+      }
+    },
+    {
+      "date": "2026-06-22",
+      "value": 76,
+      "turnover": 37372,
+      "hs300": 2.39,
+      "cyb": 2.52,
+      "smallPrem": -1.31,
+      "comps": {
+        "turnover": 100,
+        "hs300": 98,
+        "cyb": 100,
+        "smallPrem": 5
+      }
+    },
+    {
+      "date": "2026-06-23",
+      "value": 39,
+      "turnover": 34408,
+      "hs300": -2.77,
+      "cyb": -3.84,
+      "smallPrem": 0.68,
+      "comps": {
+        "turnover": 97,
+        "hs300": 0,
+        "cyb": 0,
+        "smallPrem": 58
+      }
+    },
+    {
+      "date": "2026-06-24",
+      "value": 72,
+      "turnover": 32843,
+      "hs300": 0.48,
+      "cyb": 1.41,
+      "smallPrem": 0.83,
+      "comps": {
+        "turnover": 94,
+        "hs300": 53,
+        "cyb": 78,
+        "smallPrem": 62
+      }
+    },
+    {
+      "date": "2026-06-25",
+      "value": 72,
+      "turnover": 35943,
+      "hs300": 1.56,
+      "cyb": 2.84,
+      "smallPrem": -1.19,
+      "comps": {
+        "turnover": 100,
+        "hs300": 81,
+        "cyb": 100,
+        "smallPrem": 8
+      }
+    },
+    {
+      "date": "2026-06-26",
+      "value": 38,
+      "turnover": 35524,
+      "hs300": -3.03,
+      "cyb": -4.07,
+      "smallPrem": 0.48,
+      "comps": {
+        "turnover": 99,
+        "hs300": 0,
+        "cyb": 0,
+        "smallPrem": 53
+      }
+    },
+    {
+      "date": "2026-06-29",
+      "value": 58,
+      "turnover": 35178,
+      "hs300": 1.21,
+      "cyb": 0.54,
+      "smallPrem": -1.25,
+      "comps": {
+        "turnover": 98,
+        "hs300": 72,
+        "cyb": 54,
+        "smallPrem": 7
+      }
+    },
+    {
+      "date": "2026-06-30",
+      "value": 85,
+      "turnover": 32738,
+      "hs300": 1.07,
+      "cyb": 2.99,
+      "smallPrem": 1.4,
+      "comps": {
+        "turnover": 93,
+        "hs300": 69,
+        "cyb": 100,
+        "smallPrem": 77
+      }
+    },
+    {
+      "date": "2026-07-01",
+      "value": 50,
+      "turnover": 36600,
+      "hs300": -0.41,
+      "cyb": -1.89,
+      "smallPrem": 1.17,
+      "comps": {
+        "turnover": 100,
+        "hs300": 29,
+        "cyb": 0,
+        "smallPrem": 71
+      }
+    },
+    {
+      "date": "2026-07-02",
+      "value": 35,
+      "turnover": 34506,
+      "hs300": -2.96,
+      "cyb": -5.71,
+      "smallPrem": 0.13,
+      "comps": {
+        "turnover": 97,
+        "hs300": 0,
+        "cyb": 0,
+        "smallPrem": 43
+      }
+    },
+    {
+      "date": "2026-07-03",
+      "value": 53,
+      "turnover": 31825,
+      "hs300": 0.62,
+      "cyb": 0.07,
+      "smallPrem": -0.67,
+      "comps": {
+        "turnover": 92,
+        "hs300": 57,
+        "cyb": 42,
+        "smallPrem": 22
+      }
+    },
+    {
+      "date": "2026-07-06",
+      "value": 32,
+      "turnover": 30911,
+      "hs300": 0,
+      "cyb": -1.77,
+      "smallPrem": -1.72,
+      "comps": {
+        "turnover": 90,
+        "hs300": 40,
+        "cyb": 0,
+        "smallPrem": 0
+      }
+    },
+    {
+      "date": "2026-07-07",
+      "value": 29,
+      "turnover": 25812,
+      "hs300": -1.03,
+      "cyb": -0.94,
+      "smallPrem": -0.99,
+      "comps": {
+        "turnover": 75,
+        "hs300": 13,
+        "cyb": 15,
+        "smallPrem": 14
+      }
+    },
+    {
+      "date": "2026-07-08",
+      "value": 24,
+      "turnover": 25635,
+      "hs300": -0.77,
+      "cyb": -1.7,
+      "smallPrem": -1.45,
+      "comps": {
+        "turnover": 74,
+        "hs300": 19,
+        "cyb": 0,
+        "smallPrem": 1
+      }
+    },
+    {
+      "date": "2026-07-09",
+      "value": 79,
+      "turnover": 29137,
+      "hs300": 2.54,
+      "cyb": 4.49,
+      "smallPrem": -0.3,
+      "comps": {
+        "turnover": 85,
+        "hs300": 100,
+        "cyb": 100,
+        "smallPrem": 32
+      }
+    },
+    {
+      "date": "2026-07-10",
+      "value": 39,
+      "turnover": 33886,
+      "hs300": -1.96,
+      "cyb": -4.37,
+      "smallPrem": 0.73,
+      "comps": {
+        "turnover": 96,
+        "hs300": 0,
+        "cyb": 0,
+        "smallPrem": 59
+      }
+    },
+    {
+      "date": "2026-07-13",
+      "value": 21,
+      "turnover": 28178,
+      "hs300": -1.79,
+      "cyb": -3.1,
+      "smallPrem": -3.22,
+      "comps": {
+        "turnover": 82,
+        "hs300": 0,
+        "cyb": 0,
+        "smallPrem": 0
+      }
+    },
+    {
+      "date": "2026-07-14",
+      "value": 75,
+      "turnover": 27040,
+      "hs300": 2.15,
+      "cyb": 3.43,
+      "smallPrem": -0.39,
+      "comps": {
+        "turnover": 79,
+        "hs300": 93,
+        "cyb": 100,
+        "smallPrem": 30
+      }
+    },
+    {
+      "date": "2026-07-15",
+      "value": 32,
+      "turnover": 25712,
+      "hs300": -0.2,
+      "cyb": -1.21,
+      "smallPrem": -1.15,
+      "comps": {
+        "turnover": 74,
+        "hs300": 35,
+        "cyb": 8,
+        "smallPrem": 9
+      }
+    },
+    {
+      "date": "2026-07-16",
+      "value": 24,
+      "turnover": 24036,
+      "hs300": -1.85,
+      "cyb": -2.95,
+      "smallPrem": -0.53,
+      "comps": {
+        "turnover": 69,
+        "hs300": 0,
+        "cyb": 0,
+        "smallPrem": 26
+      }
+    },
+    {
+      "date": "2026-07-17",
+      "value": 19,
+      "turnover": 26550,
+      "hs300": -3.6,
+      "cyb": -7.15,
+      "smallPrem": -2.47,
+      "comps": {
+        "turnover": 77,
+        "hs300": 0,
+        "cyb": 0,
+        "smallPrem": 0
+      }
+    },
+    {
+      "date": "2026-07-20",
+      "value": 53,
+      "turnover": 27021,
+      "hs300": 1.53,
+      "cyb": 0.42,
+      "smallPrem": -4.36,
+      "comps": {
+        "turnover": 78,
+        "hs300": 81,
+        "cyb": 51,
+        "smallPrem": 0
+      }
+    },
+    {
+      "date": "2026-07-21",
+      "value": 89,
+      "turnover": 29571,
+      "hs300": 3.06,
+      "cyb": 7.05,
+      "smallPrem": 1.16,
+      "comps": {
+        "turnover": 87,
+        "hs300": 100,
+        "cyb": 100,
+        "smallPrem": 71
+      }
+    },
+    {
+      "date": "2026-07-22",
+      "value": 30,
+      "turnover": 26533,
+      "hs300": -0.46,
+      "cyb": -3.23,
+      "smallPrem": -0.93,
+      "comps": {
+        "turnover": 77,
+        "hs300": 28,
+        "cyb": 0,
+        "smallPrem": 15
+      }
+    },
+    {
+      "date": "2026-07-23",
+      "value": 51,
+      "turnover": 21953,
+      "hs300": 0.23,
+      "cyb": 0.25,
+      "smallPrem": 0.29,
+      "comps": {
+        "turnover": 62,
+        "hs300": 46,
+        "cyb": 47,
+        "smallPrem": 48
+      }
+    },
+    {
+      "date": "2026-07-24",
+      "value": 16,
+      "turnover": 19311,
+      "hs300": -1.67,
+      "cyb": -2.65,
+      "smallPrem": -1.11,
+      "comps": {
+        "turnover": 52,
+        "hs300": 0,
+        "cyb": 0,
+        "smallPrem": 10
+      }
+    },
+    {
+      "date": "2026-07-27",
+      "value": 81,
+      "turnover": 20766,
+      "hs300": 1.15,
+      "cyb": 3.16,
+      "smallPrem": 2.19,
+      "comps": {
+        "turnover": 58,
+        "hs300": 71,
+        "cyb": 100,
+        "smallPrem": 94
+      }
+    },
+    {
+      "date": "2026-07-28",
+      "value": 24,
+      "turnover": 20258,
+      "hs300": -2.83,
+      "cyb": -7.35,
+      "smallPrem": 0.03,
+      "comps": {
+        "turnover": 56,
+        "hs300": 0,
+        "cyb": 0,
+        "smallPrem": 41
+      }
+    },
+    {
+      "date": "2026-07-29",
+      "value": 63,
+      "turnover": 22966,
+      "hs300": 0.67,
+      "cyb": 1.55,
+      "smallPrem": 0.31,
+      "comps": {
+        "turnover": 65,
+        "hs300": 58,
+        "cyb": 81,
+        "smallPrem": 48
+      }
+    },
+    {
+      "date": "2026-07-30",
+      "value": 19,
+      "turnover": 23428,
+      "hs300": -1.1,
+      "cyb": -3.97,
+      "smallPrem": -1.64,
+      "comps": {
+        "turnover": 67,
+        "hs300": 11,
+        "cyb": 0,
+        "smallPrem": 0
+      }
+    },
+    {
+      "date": "2026-07-31",
+      "value": 80,
+      "turnover": 25419,
+      "hs300": 0.85,
+      "cyb": 3.06,
+      "smallPrem": 1.69,
+      "comps": {
+        "turnover": 73,
+        "hs300": 63,
+        "cyb": 100,
+        "smallPrem": 84
+      }
+    },
+    {
+      "date": "2026-08-03",
+      "value": 36,
+      "turnover": 19974,
+      "hs300": -0.98,
+      "cyb": -1.24,
+      "smallPrem": 1.04,
+      "comps": {
+        "turnover": 55,
+        "hs300": 14,
+        "cyb": 7,
+        "smallPrem": 68
+      }
+    },
+    {
+      "date": "2026-08-04",
+      "value": 79,
+      "turnover": 22136,
+      "hs300": 1.27,
+      "cyb": 5.64,
+      "smallPrem": 1.55,
+      "comps": {
+        "turnover": 62,
+        "hs300": 74,
+        "cyb": 100,
+        "smallPrem": 81
+      }
+    },
+    {
+      "date": "2026-08-05",
+      "value": 77,
+      "turnover": 26596,
+      "hs300": 1.24,
+      "cyb": 1.32,
+      "smallPrem": 1.69,
+      "comps": {
+        "turnover": 77,
+        "hs300": 73,
+        "cyb": 75,
+        "smallPrem": 84
+      }
+    },
+    {
+      "date": "2026-08-06",
+      "value": 48,
+      "turnover": 25288,
+      "hs300": -0.15,
+      "cyb": -0.55,
+      "smallPrem": 0.65,
+      "comps": {
+        "turnover": 73,
+        "hs300": 36,
+        "cyb": 25,
+        "smallPrem": 57
+      }
+    },
+    {
+      "date": "2026-08-07",
+      "value": 72,
+      "turnover": 26644,
+      "hs300": 0.93,
+      "cyb": 1.35,
+      "smallPrem": 1.05,
+      "comps": {
+        "turnover": 77,
+        "hs300": 65,
+        "cyb": 76,
+        "smallPrem": 68
+      }
+    }
+  ],
+  "amount_history": [
+    {
+      "date": "2026-01-05",
+      "y": 25463
+    },
+    {
+      "date": "2026-01-06",
+      "y": 28065
+    },
+    {
+      "date": "2026-01-07",
+      "y": 28541
+    },
+    {
+      "date": "2026-01-08",
+      "y": 28003
+    },
+    {
+      "date": "2026-01-09",
+      "y": 31227
+    },
+    {
+      "date": "2026-01-12",
+      "y": 36014
+    },
+    {
+      "date": "2026-01-13",
+      "y": 36510
+    },
+    {
+      "date": "2026-01-14",
+      "y": 39414
+    },
+    {
+      "date": "2026-01-15",
+      "y": 29055
+    },
+    {
+      "date": "2026-01-16",
+      "y": 30262
+    },
+    {
+      "date": "2026-01-19",
+      "y": 27083
+    },
+    {
+      "date": "2026-01-20",
+      "y": 27777
+    },
+    {
+      "date": "2026-01-21",
+      "y": 26006
+    },
+    {
+      "date": "2026-01-22",
+      "y": 26917
+    },
+    {
+      "date": "2026-01-23",
+      "y": 30852
+    },
+    {
+      "date": "2026-01-26",
+      "y": 32482
+    },
+    {
+      "date": "2026-01-27",
+      "y": 28950
+    },
+    {
+      "date": "2026-01-28",
+      "y": 29654
+    },
+    {
+      "date": "2026-01-29",
+      "y": 32300
+    },
+    {
+      "date": "2026-01-30",
+      "y": 28355
+    },
+    {
+      "date": "2026-02-02",
+      "y": 25848
+    },
+    {
+      "date": "2026-02-03",
+      "y": 25442
+    },
+    {
+      "date": "2026-02-04",
+      "y": 24810
+    },
+    {
+      "date": "2026-02-05",
+      "y": 21762
+    },
+    {
+      "date": "2026-02-06",
+      "y": 21457
+    },
+    {
+      "date": "2026-02-09",
+      "y": 22495
+    },
+    {
+      "date": "2026-02-10",
+      "y": 21055
+    },
+    {
+      "date": "2026-02-11",
+      "y": 19843
+    },
+    {
+      "date": "2026-02-12",
+      "y": 21417
+    },
+    {
+      "date": "2026-02-13",
+      "y": 19827
+    },
+    {
+      "date": "2026-02-24",
+      "y": 22021
+    },
+    {
+      "date": "2026-02-25",
+      "y": 24625
+    },
+    {
+      "date": "2026-02-26",
+      "y": 25384
+    },
+    {
+      "date": "2026-02-27",
+      "y": 24880
+    },
+    {
+      "date": "2026-03-02",
+      "y": 30207
+    },
+    {
+      "date": "2026-03-03",
+      "y": 31295
+    },
+    {
+      "date": "2026-03-04",
+      "y": 23658
+    },
+    {
+      "date": "2026-03-05",
+      "y": 23900
+    },
+    {
+      "date": "2026-03-06",
+      "y": 22001
+    },
+    {
+      "date": "2026-03-09",
+      "y": 26475
+    },
+    {
+      "date": "2026-03-10",
+      "y": 23979
+    },
+    {
+      "date": "2026-03-11",
+      "y": 25084
+    },
+    {
+      "date": "2026-03-12",
+      "y": 24419
+    },
+    {
+      "date": "2026-03-13",
+      "y": 24003
+    },
+    {
+      "date": "2026-03-16",
+      "y": 23253
+    },
+    {
+      "date": "2026-03-17",
+      "y": 22079
+    },
+    {
+      "date": "2026-03-18",
+      "y": 20461
+    },
+    {
+      "date": "2026-03-19",
+      "y": 21110
+    },
+    {
+      "date": "2026-03-20",
+      "y": 22869
+    },
+    {
+      "date": "2026-03-23",
+      "y": 24315
+    },
+    {
+      "date": "2026-03-24",
+      "y": 20829
+    },
+    {
+      "date": "2026-03-25",
+      "y": 21798
+    },
+    {
+      "date": "2026-03-26",
+      "y": 19436
+    },
+    {
+      "date": "2026-03-27",
+      "y": 18533
+    },
+    {
+      "date": "2026-03-30",
+      "y": 19159
+    },
+    {
+      "date": "2026-03-31",
+      "y": 19927
+    },
+    {
+      "date": "2026-04-01",
+      "y": 20125
+    },
+    {
+      "date": "2026-04-02",
+      "y": 18430
+    },
+    {
+      "date": "2026-04-03",
+      "y": 16565
+    },
+    {
+      "date": "2026-04-07",
+      "y": 16144
+    },
+    {
+      "date": "2026-04-08",
+      "y": 24345
+    },
+    {
+      "date": "2026-04-09",
+      "y": 21341
+    },
+    {
+      "date": "2026-04-10",
+      "y": 23229
+    },
+    {
+      "date": "2026-04-13",
+      "y": 21504
+    },
+    {
+      "date": "2026-04-14",
+      "y": 23837
+    },
+    {
+      "date": "2026-04-15",
+      "y": 24152
+    },
+    {
+      "date": "2026-04-16",
+      "y": 23417
+    },
+    {
+      "date": "2026-04-17",
+      "y": 24256
+    },
+    {
+      "date": "2026-04-20",
+      "y": 25788
+    },
+    {
+      "date": "2026-04-21",
+      "y": 24085
+    },
+    {
+      "date": "2026-04-22",
+      "y": 25598
+    },
+    {
+      "date": "2026-04-23",
+      "y": 28045
+    },
+    {
+      "date": "2026-04-24",
+      "y": 26419
+    },
+    {
+      "date": "2026-04-27",
+      "y": 25895
+    },
+    {
+      "date": "2026-04-28",
+      "y": 25363
+    },
+    {
+      "date": "2026-04-29",
+      "y": 25901
+    },
+    {
+      "date": "2026-04-30",
+      "y": 27409
+    },
+    {
+      "date": "2026-05-06",
+      "y": 32268
+    },
+    {
+      "date": "2026-05-07",
+      "y": 31440
+    },
+    {
+      "date": "2026-05-08",
+      "y": 30485
+    },
+    {
+      "date": "2026-05-11",
+      "y": 35389
+    },
+    {
+      "date": "2026-05-12",
+      "y": 32427
+    },
+    {
+      "date": "2026-05-13",
+      "y": 32400
+    },
+    {
+      "date": "2026-05-14",
+      "y": 33623
+    },
+    {
+      "date": "2026-05-15",
+      "y": 33445
+    },
+    {
+      "date": "2026-05-18",
+      "y": 28940
+    },
+    {
+      "date": "2026-05-19",
+      "y": 28866
+    },
+    {
+      "date": "2026-05-20",
+      "y": 29537
+    },
+    {
+      "date": "2026-05-21",
+      "y": 34816
+    },
+    {
+      "date": "2026-05-22",
+      "y": 29033
+    },
+    {
+      "date": "2026-05-25",
+      "y": 32057
+    },
+    {
+      "date": "2026-05-26",
+      "y": 32437
+    },
+    {
+      "date": "2026-05-27",
+      "y": 32386
+    },
+    {
+      "date": "2026-05-28",
+      "y": 29682
+    },
+    {
+      "date": "2026-05-29",
+      "y": 33190
+    },
+    {
+      "date": "2026-06-01",
+      "y": 28775
+    },
+    {
+      "date": "2026-06-02",
+      "y": 27930
+    },
+    {
+      "date": "2026-06-03",
+      "y": 31303
+    },
+    {
+      "date": "2026-06-04",
+      "y": 27577
+    },
+    {
+      "date": "2026-06-05",
+      "y": 30692
+    },
+    {
+      "date": "2026-06-08",
+      "y": 27927
+    },
+    {
+      "date": "2026-06-09",
+      "y": 26403
+    },
+    {
+      "date": "2026-06-10",
+      "y": 26192
+    },
+    {
+      "date": "2026-06-11",
+      "y": 25520
+    },
+    {
+      "date": "2026-06-12",
+      "y": 32149
+    },
+    {
+      "date": "2026-06-15",
+      "y": 30312
+    },
+    {
+      "date": "2026-06-16",
+      "y": 30647
+    },
+    {
+      "date": "2026-06-17",
+      "y": 30918
+    },
+    {
+      "date": "2026-06-18",
+      "y": 33101
+    },
+    {
+      "date": "2026-06-22",
+      "y": 37372
+    },
+    {
+      "date": "2026-06-23",
+      "y": 34408
+    },
+    {
+      "date": "2026-06-24",
+      "y": 32843
+    },
+    {
+      "date": "2026-06-25",
+      "y": 35943
+    },
+    {
+      "date": "2026-06-26",
+      "y": 35524
+    },
+    {
+      "date": "2026-06-29",
+      "y": 35178
+    },
+    {
+      "date": "2026-06-30",
+      "y": 32738
+    },
+    {
+      "date": "2026-07-01",
+      "y": 36600
+    },
+    {
+      "date": "2026-07-02",
+      "y": 34506
+    },
+    {
+      "date": "2026-07-03",
+      "y": 31825
+    },
+    {
+      "date": "2026-07-06",
+      "y": 30911
+    },
+    {
+      "date": "2026-07-07",
+      "y": 25812
+    },
+    {
+      "date": "2026-07-08",
+      "y": 25635
+    },
+    {
+      "date": "2026-07-09",
+      "y": 29137
+    },
+    {
+      "date": "2026-07-10",
+      "y": 33886
+    },
+    {
+      "date": "2026-07-13",
+      "y": 28178
+    },
+    {
+      "date": "2026-07-14",
+      "y": 27040
+    },
+    {
+      "date": "2026-07-15",
+      "y": 25712
+    },
+    {
+      "date": "2026-07-16",
+      "y": 24036
+    },
+    {
+      "date": "2026-07-17",
+      "y": 26550
+    },
+    {
+      "date": "2026-07-20",
+      "y": 27021
+    },
+    {
+      "date": "2026-07-21",
+      "y": 29571
+    },
+    {
+      "date": "2026-07-22",
+      "y": 26533
+    },
+    {
+      "date": "2026-07-23",
+      "y": 21953
+    },
+    {
+      "date": "2026-07-24",
+      "y": 19311
+    },
+    {
+      "date": "2026-07-27",
+      "y": 20766
+    },
+    {
+      "date": "2026-07-28",
+      "y": 20258
+    },
+    {
+      "date": "2026-07-29",
+      "y": 22966
+    },
+    {
+      "date": "2026-07-30",
+      "y": 23428
+    },
+    {
+      "date": "2026-07-31",
+      "y": 25419
+    },
+    {
+      "date": "2026-08-03",
+      "y": 19974
+    },
+    {
+      "date": "2026-08-04",
+      "y": 22136
+    },
+    {
+      "date": "2026-08-05",
+      "y": 26596
+    },
+    {
+      "date": "2026-08-06",
+      "y": 25288
+    },
+    {
+      "date": "2026-08-07",
+      "y": 26644
+    }
+  ]
+}
