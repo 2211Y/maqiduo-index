@@ -2,7 +2,7 @@ name: 每日更新玛奇朵指数
 
 on:
   schedule:
-    - cron: '30 7 * * 1-5'   # 北京时间 15:50（UTC+8 = 07:50 UTC），周一至周五交易日
+    - cron: '50 7 * * 1-5'   # 北京时间 15:50（UTC+8 = 07:50 UTC），周一至周五交易日
   workflow_dispatch:          # 允许在 Actions 页面手动点一下立即跑
 
 permissions:
